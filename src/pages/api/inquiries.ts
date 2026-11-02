@@ -2,6 +2,7 @@ import type { APIRoute } from 'astro';
 import { connectDB } from '../../lib/db';
 import { Inquiry } from '../../lib/models/Inquiry';
 import { jsonResponse, optionsResponse } from '../../lib/cors';
+import { sendInquiryNotificationEmail } from '../../lib/email';
 
 export const prerender = false;
 
@@ -30,7 +31,17 @@ export const POST: APIRoute = async ({ request }) => {
     }
 
     const inquiry = await Inquiry.create({ name, email, topic, msg });
-    return jsonResponse({ success: true, inquiry }, 201, request);
+
+    // Send email notification to gswebit23@gmail.com with the submitted form content
+    let emailSent = false;
+    try {
+      await sendInquiryNotificationEmail({ name, email, topic, msg });
+      emailSent = true;
+    } catch (emailErr) {
+      console.error('Failed to send inquiry notification email:', emailErr);
+    }
+
+    return jsonResponse({ success: true, inquiry, emailSent }, 201, request);
   } catch (err: any) {
     console.error('Create inquiry error:', err);
     return jsonResponse(
