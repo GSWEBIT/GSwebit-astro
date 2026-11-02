@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Naresh Kumar | Mr. India 2019 | Online Coach</title>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F2F2EF;--ink:#12141A;--mut:#555A66;--saf:#F28C1B;--grn:#0F3D2E;--card:#FFFFFF;--line:#D9D9D3;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#101412;--ink:#F2F2EF;--mut:#A3AAA6;--card:#192019;--line:#2B352E;--grn:#1C6B50}}
+:root[data-theme="dark"]{--bg:#101412;--ink:#F2F2EF;--mut:#A3AAA6;--card:#192019;--line:#2B352E;--grn:#1C6B50}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 Manrope,system-ui,sans-serif}
+h1,h2,h3{font-family:Anton,Impact,"Arial Narrow",sans-serif;font-weight:400;letter-spacing:.01em;line-height:1;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--saf);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+.demo{background:var(--ink);color:var(--bg);font-size:13px;text-align:center;padding:8px 12px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:16px 22px;max-width:1080px;margin:0 auto}
+nav b{font-family:Anton,Impact,sans-serif;font-weight:400;font-size:22px}
+nav div{display:flex;gap:18px;font-size:15px;font-weight:500}
+nav a{text-decoration:none}
+@media(max-width:640px){nav div a:not(.btn){display:none}}
+.hero{background:var(--saf);color:#12141A;overflow:hidden}
+.hero .wrap{padding-top:34px;padding-bottom:50px}
+.hero h1{font-size:clamp(76px,21vw,230px);line-height:.88;text-transform:uppercase;margin:8px 0 22px}
+.hero h1 span{display:block}
+.hero h1 .s{font-size:.42em;letter-spacing:.06em;line-height:1.1}
+.hero p{max-width:520px;font-size:19px;margin:0 0 26px;font-weight:500}
+.btn{display:inline-block;background:#12141A;color:#fff;padding:14px 26px;border-radius:4px;font-weight:700;text-decoration:none;border:0;font:700 16px Manrope,sans-serif;cursor:pointer}
+.btn.o{background:transparent;color:inherit;border:2px solid currentColor;margin-left:10px}
+nav .btn{padding:9px 18px;font-size:14px;background:var(--grn);color:#fff}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid var(--line)}
+.stats div{padding:24px 22px;border-right:1px solid var(--line)}
+.stats div:last-child{border:0}
+.stats b{font:400 40px Anton,Impact,sans-serif;display:block}
+.stats span{color:var(--mut);font-size:14px}
+section{padding:72px 0}
+h2{font-size:clamp(38px,7vw,64px);margin-bottom:12px;text-transform:uppercase}
+.lead{color:var(--mut);max-width:560px;margin:0 0 36px}
+.about{display:grid;grid-template-columns:1fr 1.2fr;gap:44px;align-items:start}
+@media(max-width:760px){.about{grid-template-columns:1fr}}
+.ph{aspect-ratio:4/5;background:repeating-linear-gradient(135deg,var(--line) 0 12px,transparent 12px 24px);border:1px solid var(--line);display:grid;place-items:center;text-align:center;color:var(--mut);font-size:14px;padding:16px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.tags span{border:1px solid var(--ink);padding:5px 12px;border-radius:99px;font-size:14px;font-weight:500}
+.programs{background:var(--grn);color:#F2F2EF}
+.programs .lead{color:#C7D6CE}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border-top:1px solid rgba(255,255,255,.25)}
+@media(max-width:700px){.grid{grid-template-columns:1fr}}
+.grid article{padding:28px 24px 28px 0;border-bottom:1px solid rgba(255,255,255,.25)}
+.grid h3{font-size:30px;margin-bottom:8px;text-transform:uppercase}
+.grid p{margin:0;color:#C7D6CE;font-size:16px}
+.tr{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:760px){.tr{grid-template-columns:1fr}}
+.tr figure{margin:0;background:var(--card);border:1px solid var(--line)}
+.tr .ph{aspect-ratio:1/1;border:0;border-bottom:1px solid var(--line)}
+.tr figcaption{padding:14px 16px;font-size:14px;color:var(--mut)}
+.note{font-size:13px;color:var(--mut);margin-top:16px}
+.form{background:var(--card);border:1px solid var(--line);max-width:680px;padding:30px 26px}
+.bar{height:6px;background:var(--line);margin-bottom:24px}
+.bar i{display:block;height:100%;width:0;background:var(--saf);transition:width .3s}
+.form h3{font-size:30px;text-transform:uppercase;margin-bottom:6px}
+.opts{display:grid;gap:10px;margin:18px 0}
+.opts label{display:block;border:2px solid var(--line);padding:13px 16px;border-radius:4px;cursor:pointer;font-weight:500}
+.opts label:has(input:checked){border-color:var(--saf);background:color-mix(in srgb,var(--saf) 14%,transparent)}
+.opts input{margin-right:10px;accent-color:var(--saf)}
+.form input[type=text],.form input[type=email],.form input[type=tel],.form textarea{width:100%;padding:13px;border:2px solid var(--line);border-radius:4px;background:var(--bg);color:var(--ink);font:inherit;margin:6px 0 12px}
+.row{display:flex;gap:10px;justify-content:space-between;align-items:center}
+.row .btn.g{background:transparent;color:var(--mut);padding-left:0}
+.err{color:#C0392B;font-size:14px;min-height:20px;margin:0}
+.res{border-left:5px solid var(--saf);padding:6px 0 6px 16px;margin:16px 0}
+footer{background:#12141A;color:#F2F2EF;padding:60px 0 calc(26px + env(safe-area-inset-bottom,0px))}
+.fg{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.15)}
+.fg h3{font:700 13px Manrope,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#9EA3A0;margin-bottom:18px}
+.fn{font:400 clamp(40px,7vw,60px)/.95 Anton,Impact,sans-serif;text-transform:uppercase;margin:0 0 6px}
+.fs{color:var(--saf);font-weight:700;margin:0 0 14px}
+.fg p{color:#B5BAB7;margin:0 0 22px;max-width:340px;font-size:15px}
+.fg ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.fg a{text-decoration:none;color:#F2F2EF;transition:color .2s}.fg a:hover{color:var(--saf)}
+.fcta{display:inline-block;background:var(--saf);color:#12141A!important;padding:11px 22px;border-radius:99px;font-weight:700;font-size:15px}
+.fb{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding-top:22px;font-size:13px;color:#9EA3A0}
+.fb a{color:#F2F2EF;text-decoration:none}
+@media(max-width:760px){.fg{grid-template-columns:1fr 1fr;gap:34px 24px}.fg>div:first-child{grid-column:1/-1}}
+@media(max-width:560px){#fl{right:12px;bottom:calc(34px + env(safe-area-inset-bottom,0px));padding:7px 14px;font-size:12px;font-weight:700;box-shadow:0 4px 14px rgba(0,0,0,.25)}footer{padding-top:48px}.fb{flex-direction:column;align-items:flex-start}}
+
+
+@media(prefers-reduced-motion:no-preference){.hero h1 span{animation:up .7s cubic-bezier(.2,.8,.2,1) both}.hero h1 span:nth-child(2){animation-delay:.12s}.hero h1 span:nth-child(3){animation-delay:.24s}}
+@keyframes up{from{transform:translateY(60%);opacity:0}}
+#pg{position:fixed;top:0;left:0;height:3px;width:100%;background:var(--saf);transform:scaleX(0);transform-origin:0 50%;z-index:50}
+.rv{opacity:0;transform:translateY(26px)}
+.rv.rv{transition:opacity .7s ease var(--d,0s),transform .7s cubic-bezier(.2,.8,.2,1) var(--d,0s)}
+.rv.in{opacity:1;transform:none}
+.btn{transition:transform .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.22)}
+.btn:active{transform:scale(.97)}
+.grid article h3{transition:color .3s}.grid article:hover h3{color:var(--saf)}
+.tr figure:hover{transform:translateY(-6px);box-shadow:0 14px 30px rgba(0,0,0,.14)}
+.opts label{transition:border-color .2s,background .2s,transform .2s}.opts label:hover{border-color:var(--saf);transform:translateX(3px)}
+#step>*{animation:fade .4s ease both}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}}
+.bar i{transition:width .5s cubic-bezier(.2,.8,.2,1)}
+.mq{overflow:hidden;background:var(--ink);color:var(--bg);padding:14px 0;white-space:nowrap}
+.mq>div{display:inline-flex;animation:mq 30s linear infinite;font:400 24px Anton,Impact,sans-serif;text-transform:uppercase}
+.mq .g{display:flex;gap:44px;padding-right:44px}
+.mq:hover>div{animation-play-state:paused}
+@keyframes mq{to{transform:translateX(-50%)}}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.steps div{border-top:3px solid var(--saf);padding-top:14px}
+.steps b{font:400 34px Anton,Impact,sans-serif;display:block;margin-bottom:4px}
+.steps h3{font-size:24px;text-transform:uppercase;margin-bottom:8px}
+.steps p{margin:0;color:var(--mut);font-size:15px}
+details{border-bottom:1px solid var(--line);padding:18px 0;max-width:760px}
+summary{cursor:pointer;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:26px;line-height:1;transition:transform .3s;color:var(--saf)}
+details[open] summary::after{transform:rotate(45deg)}
+details p{margin:10px 0 0;color:var(--mut);animation:fade .35s ease}
+#fl{position:fixed;right:14px;bottom:calc(26px + env(safe-area-inset-bottom,0px));z-index:40;padding:10px 18px;font-size:14px;line-height:1.2;border-radius:99px;white-space:nowrap;background:var(--saf);color:#12141A;box-shadow:0 8px 24px rgba(0,0,0,.3);transform:translateY(300%);transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+#fl.on{transform:none}
+@media(max-width:900px){.steps{grid-template-columns:repeat(2,1fr)}section{padding:56px 0}.about{gap:28px}}
+@media(max-width:560px){body{font-size:16px}.steps{grid-template-columns:1fr}.stats div{padding:16px 10px}.stats b{font-size:28px}.stats span{font-size:12px;display:block;line-height:1.3}.hero .wrap .btn{display:block;text-align:center;margin:0 0 10px}.hero .wrap .btn.o{margin-left:0}.form{padding:22px 16px}.hero p{font-size:17px}.mq>div{font-size:20px}nav{padding:12px 16px}.wrap{padding:0 16px}}
+@media(min-width:1400px){.wrap,nav{max-width:1240px}}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}.rv.rv,#fl,.btn{transition:none}.mq>div{animation:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body id="top">
+<div class="demo">Concept preview made for Naresh Kumar. Photos and client results are placeholders.</div>
+<header class="hero">
+<nav aria-label="Main"><b>NK</b><div><a href="#about">About</a><a href="#programs">Programs</a><a href="#results">Results</a><a href="#faq">FAQ</a><a class="btn" href="#apply">Apply</a></div></nav>
+<div class="wrap">
+<h1><span class="s">Naresh Kumar</span><span>Mr. India</span><span>2019</span></h1>
+<p>Certified fitness expert, lifestyle celebrity coach and Pilates instructor. Online training and competition prep for clients in India and abroad.</p>
+<a class="btn" href="#apply">Apply for coaching</a><a class="btn o" href="#results">See results</a>
+</div>
+</header>
+<div class="wrap stats" style="padding:0">
+<div><b>193K</b><span>Instagram followers</span></div>
+<div><b>2,490</b><span>posts on @nareshfitness</span></div>
+<div><b>2019</b><span>Mr. India title</span></div>
+</div>
+
+<div class="mq" aria-hidden="true"><div><span class="g"><span>Mr. India 2019</span><span>Online prep</span><span>Celebrity lifestyle coach</span><span>Pilates</span><span>Certified fitness expert</span></span><span class="g"><span>Mr. India 2019</span><span>Online prep</span><span>Celebrity lifestyle coach</span><span>Pilates</span><span>Certified fitness expert</span></span></div></div>
+<section id="about"><div class="wrap about">
+<div class="ph" role="img" aria-label="Portrait placeholder">Replace with Naresh's portrait<br>(4:5 stage or studio shot)</div>
+<div>
+<h2>Built on the stage. Applied to your life.</h2>
+<p class="lead" style="margin-bottom:14px">Naresh won Mr. India in 2019 and now coaches people who want the same discipline in their own physique, whether that is a stage, a screen or a busy schedule.</p>
+<p style="color:var(--mut)">Every client gets a plan built around their body, their calendar and their time zone, with check-ins that keep the plan moving.</p>
+<div class="tags"><span>Certified fitness expert</span><span>Lifestyle celebrity coach</span><span>Pilates instructor</span><span>Online training</span><span>Contest preparation</span></div>
+</div></div></section>
+
+<section id="programs" class="programs"><div class="wrap">
+<h2>Ways to train with Naresh</h2>
+<p class="lead">Four paths. The application below places you in the right one.</p>
+<div class="grid">
+<article><h3>Online training</h3><p>Personalised training and nutrition guidance delivered remotely, with regular progress check-ins.</p></article>
+<article><h3>Contest preparation</h3><p>Stage-ready prep from someone who has stood on India's biggest bodybuilding stage.</p></article>
+<article><h3>Lifestyle and celebrity coaching</h3><p>Discreet, flexible coaching for public-facing clients and demanding schedules.</p></article>
+<article><h3>Pilates</h3><p>Instructor-led Pilates for core strength, mobility and posture.</p></article>
+</div></div></section>
+
+<section id="results"><div class="wrap">
+<h2>Client transformations</h2>
+<p class="lead">One place for before and after proof, instead of scrolling 2,490 posts.</p>
+<div class="tr">
+<figure><div class="ph">Before / after<br>photo slot</div><figcaption>Client name, goal and timeline. Add with the client's consent.</figcaption></figure>
+<figure><div class="ph">Before / after<br>photo slot</div><figcaption>Client name, goal and timeline. Add with the client's consent.</figcaption></figure>
+<figure><div class="ph">Before / after<br>photo slot</div><figcaption>Client name, goal and timeline. Add with the client's consent.</figcaption></figure>
+</div>
+<p class="note">Placeholders only. Final results come from Naresh's real client stories.</p>
+</div></section>
+
+<section id="how"><div class="wrap"><h2>How it works</h2><p class="lead">From application to first session, in four steps.</p>
+<div class="steps"><div><b>1</b><h3>Apply</h3><p>Answer six short questions about your goal, level and schedule.</p></div><div><b>2</b><h3>Review</h3><p>Naresh's team reads your answers and replies on WhatsApp or email.</p></div><div><b>3</b><h3>Get your plan</h3><p>Training and nutrition built around your body, calendar and time zone.</p></div><div><b>4</b><h3>Check in</h3><p>Regular progress check-ins so the plan keeps up with you.</p></div></div></div></section>
+<section id="faq" style="padding-top:0"><div class="wrap"><h2>Questions</h2><p class="lead">Quick answers before you apply.</p>
+<details><summary>Do I need a gym?</summary><p>No. Plans are built around what you have access to: a gym, home equipment or both.</p></details>
+<details><summary>I live outside India. Can I train with Naresh?</summary><p>Yes. Coaching is online, and check-ins fit your time zone.</p></details>
+<details><summary>Is coaching only for competitors?</summary><p>No. Contest prep is one path. Fat loss, muscle gain, Pilates and lifestyle coaching are open too.</p></details>
+<details><summary>What happens after I apply?</summary><p>Naresh's team reviews your answers and contacts you on the WhatsApp number or email you gave.</p></details></div></section>
+<section id="apply" style="background:var(--card);border-top:1px solid var(--line)"><div class="wrap">
+<h2>Apply for coaching</h2>
+<p class="lead">Six quick questions. Naresh sees serious, complete applications first.</p>
+<div class="form" id="form" aria-live="polite">
+<div class="bar"><i id="bar"></i></div>
+<div id="step"></div>
+</div></div></section>
+
+<footer><div class="wrap">
+<div class="fg">
+<div><h2 class="fn">Naresh Kumar</h2><p class="fs">Mr. India 2019</p><p>Certified fitness expert, lifestyle celebrity coach and Pilates instructor. Online training and prep.</p><a class="fcta" href="#apply">Apply for coaching</a></div>
+<div><h3>Explore</h3><ul><li><a href="#about">About</a></li><li><a href="#programs">Programs</a></li><li><a href="#results">Results</a></li><li><a href="#faq">FAQ</a></li></ul></div>
+<div><h3>Official links</h3><ul><li><a href="https://www.instagram.com/nareshfitness/" target="_blank" rel="noopener">Instagram</a></li><li><a href="#">YouTube (add link)</a></li><li><a href="#apply">Coaching application</a></li></ul></div>
+</div>
+<div class="fb"><span>Concept preview, not yet live. Follower count and title from his public Instagram.</span><a href="#top">Back to top</a></div>
+</div></footer>
+
+<script>
+const Q=[
+{k:'goal',t:'What is your main goal?',o:['Fat loss and body recomposition','Muscle gain','Competition or stage prep','Lifestyle and image for a public role']},
+{k:'level',t:'Where are you training today?',o:['Just starting','Training regularly for 1-3 years','Advanced, 3+ years','Competitive athlete']},
+{k:'prog',t:'Which program fits you?',o:['Online training','Contest preparation','Lifestyle and celebrity coaching','Pilates']},
+{k:'when',t:'When do you want to start?',o:['This week','Within a month','Within 3 months','Just exploring']},
+{k:'inv',t:'What are you ready to invest monthly?',o:['Under 5,000 INR','5,000 to 15,000 INR','15,000 to 40,000 INR','40,000 INR or more']},
+{k:'who',t:'How can Naresh reach you?',f:1}
+];
+const A={};let i=0;
+const $=s=>document.querySelector(s);
+function show(){
+$('#bar').style.width=(i/Q.length*100)+'%';
+if(i>=Q.length)return done();
+const q=Q[i];let h='<h3>'+q.t+'</h3>';
+if(q.f){h+='<label>Name<input type="text" id="n" autocomplete="name"></label><label>Email<input type="email" id="e" autocomplete="email"></label><label>WhatsApp number with country code<input type="tel" id="p" autocomplete="tel"></label><label>City and country<input type="text" id="c"></label><label>Anything Naresh should know?<textarea id="m" rows="3"></textarea></label>'}
+else{h+='<div class="opts" role="radiogroup">'+q.o.map((o,j)=>'<label><input type="radio" name="o" value="'+j+'"'+(A[q.k]===o?' checked':'')+'>'+o+'</label>').join('')+'</div>'}
+h+='<p class="err" id="err"></p><div class="row">'+(i?'<button class="btn g" id="bk">Back</button>':'<span></span>')+'<button class="btn" id="nx">'+(i==Q.length-1?'Send application':'Next')+'</button></div>';
+$('#step').innerHTML=h;
+$('#nx').onclick=next;if(i)$('#bk').onclick=()=>{i--;show()};
+}
+function next(){
+const q=Q[i];
+if(q.f){
+const n=$('#n').value.trim(),e=$('#e').value.trim(),p=$('#p').value.trim();
+if(!n||!/^\S+@\S+\.\S+$/.test(e)||p.length<7){$('#err').textContent='Add your name, a valid email and a phone number.';return}
+Object.assign(A,{name:n,email:e,phone:p,city:$('#c').value.trim()});
+}else{
+const r=document.querySelector('input[name=o]:checked');
+if(!r){$('#err').textContent='Choose one option to continue.';return}
+A[q.k]=q.o[r.value];
+}
+i++;show();
+}
+function done(){
+const hot=(A.inv.startsWith('15')||A.inv.startsWith('40'))&&A.when!=='Just exploring';
+$('#bar').style.width='100%';
+$('#step').innerHTML='<h3>Application received</h3><p>Thanks, '+A.name.split(' ')[0]+'. Naresh\'s team will contact you on WhatsApp or email.</p>'+
+'<div class="res"><b>Demo view for Naresh: how this lead would arrive</b><br>'+A.name+', '+(A.city||'location not given')+'<br>Goal: '+A.goal+'<br>Level: '+A.level+'<br>Program: '+A.prog+'<br>Start: '+A.when+'<br>Budget: '+A.inv+'<br><b>'+(hot?'Priority lead. Reply first.':'Standard lead. Reply within 48 hours.')+'</b></div>'+
+'<p class="note">Preview only. Nothing was sent. In the live site this goes to email or WhatsApp.</p>';
+}
+const pg=document.createElement('div');pg.id='pg';document.body.prepend(pg);
+const fl=document.createElement('a');fl.id='fl';fl.className='btn';fl.href='#apply';fl.textContent='Apply now';document.body.append(fl);
+const ap=$('#apply');
+function sc(){const h=document.documentElement;pg.style.transform='scaleX('+(scrollY/Math.max(h.scrollHeight-innerHeight,1))+')';fl.classList.toggle('on',scrollY>500&&ap.getBoundingClientRect().top>innerHeight*.5)}
+addEventListener('scroll',sc,{passive:true});sc();
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);setTimeout(()=>e.target.style.setProperty('--d','0s'),1100)}}),{threshold:.12});
+document.querySelectorAll('section h2,section .lead,.about>*,.grid article,.tr figure,.steps>div,details,.form,.stats div,footer .wrap>*').forEach((el,k)=>{el.classList.add('rv');el.style.setProperty('--d',(k%4)*.08+'s');io.observe(el)});
+document.querySelectorAll('.stats b').forEach((b,k)=>{const t=[193,2490,2019][k],s=k?'':'K';new IntersectionObserver((es,o)=>{if(es[0].isIntersecting){o.disconnect();const st=performance.now();(function f(n){const p=Math.min((n-st)/1400,1),v=Math.round(t*(1-Math.pow(1-p,3)));b.textContent=(k==1?v.toLocaleString('en-US'):v)+s;if(p<1)requestAnimationFrame(f)})(st)}}).observe(b)});
+show();
+</script>
+<script src="../preview-bar.js"></script></body>
+</html>

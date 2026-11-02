@@ -1,0 +1,189 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Cta from '../components/Cta.astro';
+---
+
+<Layout title="Services | GSWebIT">
+  <main>
+    <section class="blue pg-head">
+      <div class="wrap pg-in">
+        <div>
+          <p class="eyebrow rv" style="--d:.05s">What we do</p>
+          <h1 class="rv" style="--d:.15s">Digital solutions built to scale your business</h1>
+          <p class="sub rv" style="--d:.28s">
+            We design, engineer, and market modern digital experiences that turn visitors into customers.
+          </p>
+        </div>
+        <div class="art rv" style="--d:.3s">
+          <img
+            src="/assets/img/services.svg"
+            width="1159"
+            height="771"
+            alt="Connected web, analytics and e-commerce services around a laptop"
+            fetchpriority="high"
+            decoding="async"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="sec">
+      <div class="wrap">
+        <div class="head c">
+          <h2>Our services</h2>
+          <p class="sub">
+            From responsive web interfaces to reliable backend infrastructure and performance marketing.
+          </p>
+        </div>
+        <div class="grid g3">
+          <article class="card" id="web-design">
+            <div class="thumb">
+              <img
+                src="/assets/img/web-design.svg"
+                width="450"
+                height="450"
+                alt="Web design illustration"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <span class="ico" data-ico="design"></span>
+            <h3>Web Design</h3>
+            <p>Modern, conversion-focused interfaces designed around your brand and your customers.</p>
+            <a class="more" href="/contact">Ask about web design</a>
+          </article>
+
+          <article class="card" id="web-development">
+            <div class="thumb">
+              <img
+                src="/assets/img/web-development.svg"
+                width="4195"
+                height="2200"
+                alt="Back-end development illustration"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <span class="ico" data-ico="dev"></span>
+            <h3>Web Development</h3>
+            <p>Fast, secure, scalable websites and web applications built on the right technology.</p>
+            <a class="more" href="/contact">Ask about web development</a>
+          </article>
+
+          <article class="card" id="digital-marketing">
+            <div class="thumb">
+              <img
+                src="/assets/img/digital-marketing.svg"
+                width="450"
+                height="450"
+                alt="Digital marketing illustration"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <span class="ico" data-ico="mkt"></span>
+            <h3>Digital Marketing</h3>
+            <p>SEO, paid, content, and social strategies that turn traffic into revenue.</p>
+            <a class="more" href="/contact">Ask about digital marketing</a>
+          </article>
+
+          <article class="card" id="odoo">
+            <div class="thumb bleed">
+              <img
+                src="/assets/img/odoo.svg"
+                width="3181"
+                height="2100"
+                alt="Odoo ERP illustration"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <span class="ico" data-ico="odoo"></span>
+            <h3>Odoo</h3>
+            <p>Implement and customise Odoo ERP to streamline your sales, inventory, and accounting.</p>
+            <a class="more" href="/contact">Ask about odoo</a>
+          </article>
+
+          <article class="card" id="wordpress">
+            <div class="thumb">
+              <img
+                src="/assets/img/wordpress.svg"
+                width="750"
+                height="500"
+                alt="WordPress development illustration"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <span class="ico" data-ico="wp"></span>
+            <h3>WordPress Development</h3>
+            <p>Custom themes, plugins, and e-commerce on the world's most flexible platform.</p>
+            <a class="more" href="/contact">Ask about wordpress development</a>
+          </article>
+
+          <article class="card" id="support">
+            <div class="thumb">
+              <img
+                src="/assets/img/support.svg"
+                width="3710"
+                height="3710"
+                alt="Support and maintenance illustration"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <span class="ico" data-ico="sup"></span>
+            <h3>Support & Maintenance</h3>
+            <p>Ongoing care, updates, and performance so your website keeps working at its best.</p>
+            <a class="more" href="/contact">Ask about support & maintenance</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec tint">
+      <div class="wrap split flip">
+        <div class="visual">
+          <img
+            src="/assets/img/growth.svg"
+            width="3000"
+            height="3000"
+            alt="Growth chart showing business results rising"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <div class="narrow" style="width:100%;margin:0">
+          <h2>Let's grow together</h2>
+          <p class="sub">
+            Have an upcoming project? Tell us about your goals and we'll map out the path forward within 24 hours.
+          </p>
+          <form class="form" id="cform">
+            <label>Name *<input required name="name" placeholder="Enter your name" /></label>
+            <label>Email *<input required type="email" name="email" placeholder="you@example.com" /></label>
+            <label>What can we help with?
+              <select name="topic">
+                <option>Full website build</option>
+                <option>Web design</option>
+                <option>WordPress</option>
+                <option>Odoo</option>
+                <option>Digital marketing</option>
+                <option>Support & maintenance</option>
+              </select>
+            </label>
+            <label>Message
+              <textarea name="msg" rows="4" placeholder="Tell us briefly about your project, timeline and objectives."></textarea>
+            </label>
+            <button class="btn acc">Send inquiry</button>
+            <p class="ok" id="ok" role="status" hidden>
+              Opening your email app to send this. You can also write to gswebit23@gmail.com.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <Cta bg="orange" />
+  </main>
+</Layout>
+

@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anaheez Patel — Concept Preview v2</title>
+<meta name="description" content="Bento-style personal website concept for Anaheez Patel: luxury, branding, social psychology and culture.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --emerald:#0e2b25;
+  --emerald2:#14403608;
+  --deep:#091d19;
+  --sage:#cdd9cb;
+  --mist:#e9eee6;
+  --blush:#f0d3c6;
+  --coral:#e0714f;
+  --cream:#f7f4ee;
+  --ink:#10201c;
+  --muted:#5f6f69;
+  --serif:'Fraunces',Georgia,serif;
+  --sans:'DM Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --r:26px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--mist);color:var(--ink);font-family:var(--sans);font-weight:400;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+svg{display:block}
+
+.layout{display:grid;grid-template-columns:320px 1fr;min-height:100vh}
+
+/* sidebar */
+aside{position:sticky;top:0;height:100vh;background:var(--emerald);color:var(--cream);padding:34px 30px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}
+aside::before{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(224,113,79,.28),transparent 65%);right:-210px;top:-120px}
+aside::after{content:"";position:absolute;width:340px;height:340px;border-radius:50%;border:1px solid rgba(205,217,203,.14);left:-120px;bottom:-110px}
+.side-top,.side-bot{position:relative;z-index:1}
+.badge{display:inline-flex;align-items:center;gap:8px;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;padding:7px 12px;border:1px solid rgba(240,211,198,.4);border-radius:99px;color:var(--blush)}
+.badge i{width:6px;height:6px;border-radius:50%;background:var(--coral);display:block}
+.mono{margin-top:40px;font-family:var(--serif);font-weight:300;font-size:58px;line-height:.92;letter-spacing:-.02em}
+.mono em{display:block;font-style:italic;color:var(--blush)}
+.role{margin-top:22px;font-size:13px;color:var(--sage);max-width:24ch}
+.menu{display:grid;gap:4px;margin-top:44px}
+.menu a{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid rgba(205,217,203,.14);font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--sage);transition:.25s}
+.menu a span{font-family:var(--serif);font-style:italic;color:var(--coral);letter-spacing:0;text-transform:none;font-size:15px}
+.menu a:hover{color:var(--cream);padding-left:8px}
+.side-bot a.go{display:block;text-align:center;background:var(--coral);color:var(--deep);font-weight:500;font-size:13px;letter-spacing:.14em;text-transform:uppercase;padding:15px;border-radius:99px;transition:.25s}
+.side-bot a.go:hover{background:var(--blush)}
+.side-bot small{display:block;margin-top:14px;font-size:11px;color:#8ea39a;text-align:center}
+
+/* main */
+main{padding:28px}
+.bento{display:grid;grid-template-columns:repeat(12,1fr);gap:18px;grid-auto-rows:minmax(80px,auto)}
+.card{border-radius:var(--r);padding:34px;position:relative;overflow:hidden}
+.lbl{font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;opacity:.65;margin-bottom:16px;display:block}
+
+/* hero card */
+.c-hero{grid-column:span 8;grid-row:span 4;background:var(--cream);display:flex;flex-direction:column;justify-content:space-between;min-height:470px}
+.c-hero h1{font-family:var(--serif);font-weight:300;font-size:clamp(46px,6.6vw,96px);line-height:.96;letter-spacing:-.025em}
+.c-hero h1 em{font-style:italic;color:var(--coral)}
+.c-hero p{font-size:19px;max-width:40ch;color:var(--muted);margin-top:26px}
+.pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px}
+.pills span{padding:9px 16px;border:1px solid var(--ink);border-radius:99px;font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+.pills span:nth-child(odd){background:var(--ink);color:var(--cream)}
+
+/* portrait */
+.c-photo{grid-column:span 4;grid-row:span 4;background:linear-gradient(170deg,#f0d3c6,#d79d86 55%,#8f4f3d);padding:0;min-height:470px}
+.c-photo svg{position:absolute;inset:0;width:100%;height:100%}
+.c-photo .tag{position:absolute;left:20px;right:20px;bottom:20px;background:rgba(14,43,37,.85);color:var(--cream);padding:14px 18px;border-radius:16px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;backdrop-filter:blur(6px)}
+
+/* stats-like facts */
+.c-edu{grid-column:span 4;grid-row:span 2;background:var(--emerald);color:var(--cream)}
+.c-edu h3{font-family:var(--serif);font-weight:300;font-size:46px;line-height:1}
+.c-edu h3 em{color:var(--blush)}
+.c-edu p{margin-top:12px;color:var(--sage);font-size:14px}
+.c-ex{grid-column:span 4;grid-row:span 2;background:var(--blush)}
+.c-ex h3{font-family:var(--serif);font-weight:400;font-size:30px;line-height:1.1}
+.c-ex p{margin-top:12px;font-size:14px;color:#6a463a}
+.c-ath{grid-column:span 4;grid-row:span 2;background:var(--sage)}
+.c-ath h3{font-family:var(--serif);font-weight:400;font-size:30px;line-height:1.1}
+.c-ath p{margin-top:12px;font-size:14px;color:#3d5149}
+
+/* about */
+.c-about{grid-column:span 7;grid-row:span 3;background:#fff}
+.c-about h2,.c-focus h2,.c-adv h2,.c-journal h2,.c-contact h2{font-family:var(--serif);font-weight:300;font-size:clamp(30px,3.4vw,46px);line-height:1.05;letter-spacing:-.015em}
+.c-about h2 em,.c-adv h2 em,.c-journal h2 em{font-style:italic;color:var(--coral)}
+.c-about p{margin-top:18px;color:var(--muted);max-width:52ch;font-size:16px}
+.quote{grid-column:span 5;grid-row:span 3;background:var(--deep);color:var(--cream);display:flex;flex-direction:column;justify-content:space-between}
+.quote .q{font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(26px,2.8vw,38px);line-height:1.2}
+.quote .q::before{content:"\201C";display:block;font-size:90px;line-height:.5;color:var(--coral);margin-bottom:16px}
+.quote small{color:var(--sage);font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+
+/* focus */
+.c-focus{grid-column:span 12;background:var(--cream)}
+.focus-row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:28px}
+.fo{padding:24px;border-radius:20px;background:var(--mist);transition:.3s}
+.fo:nth-child(2){background:var(--blush)}
+.fo:nth-child(3){background:var(--sage)}
+.fo:nth-child(4){background:var(--emerald);color:var(--cream)}
+.fo:hover{transform:translateY(-6px)}
+.fo b{font-family:var(--serif);font-weight:400;font-size:26px;display:block;margin:34px 0 8px;line-height:1.05}
+.fo span.n{font-family:var(--serif);font-style:italic;opacity:.6}
+.fo p{font-size:14px;opacity:.78}
+
+/* advisory */
+.c-adv{grid-column:span 12;background:var(--emerald);color:var(--cream)}
+.c-adv h2 em{color:var(--blush)}
+.adv-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0 50px;margin-top:30px}
+.ad{display:flex;gap:20px;align-items:flex-start;padding:24px 0;border-top:1px solid rgba(205,217,203,.18);transition:.3s}
+.ad:hover{padding-left:10px}
+.ad i{font-family:var(--serif);color:var(--coral);font-style:italic;font-size:20px;min-width:34px}
+.ad b{font-family:var(--serif);font-weight:400;font-size:26px;line-height:1.1;display:block}
+.ad p{color:var(--sage);font-size:14px;margin-top:6px}
+.note{margin-top:22px;font-size:12px;color:#8ea39a;font-style:italic}
+
+/* journal */
+.c-journal{grid-column:span 12;background:#fff}
+.j-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+.jp{border-radius:20px;overflow:hidden;background:var(--mist);transition:.3s}
+.jp:hover{transform:translateY(-6px)}
+.jp .th{height:210px;position:relative}
+.jp .th svg{position:absolute;inset:0;width:100%;height:100%}
+.jp .tx{padding:20px 22px 24px}
+.jp .tx small{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--coral);font-weight:500}
+.jp .tx b{display:block;font-family:var(--serif);font-weight:400;font-size:24px;line-height:1.15;margin-top:8px}
+
+/* contact */
+.c-contact{grid-column:span 12;background:var(--blush);display:grid;grid-template-columns:1fr 1.1fr;gap:50px}
+.c-contact p.s{margin-top:16px;color:#6a463a;max-width:38ch}
+.c-contact ul{list-style:none;margin-top:26px}
+.c-contact li{padding:12px 0;border-top:1px solid rgba(106,70,58,.25);font-size:14px;display:flex;justify-content:space-between}
+.c-contact li span{font-size:11px;letter-spacing:.16em;text-transform:uppercase;opacity:.65}
+form{display:grid;gap:14px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+input,select,textarea{width:100%;font-family:var(--sans);font-size:15px;padding:15px 18px;border:0;border-radius:14px;background:rgba(255,255,255,.7);color:var(--ink);outline:2px solid transparent;transition:.2s}
+input:focus,select:focus,textarea:focus{outline-color:var(--emerald);background:#fff}
+textarea{min-height:100px;resize:vertical}
+button{font-family:var(--sans);font-weight:500;font-size:13px;letter-spacing:.14em;text-transform:uppercase;padding:16px 28px;border:0;border-radius:99px;background:var(--emerald);color:var(--cream);cursor:pointer;transition:.25s;justify-self:start}
+button:hover{background:var(--coral);color:var(--deep)}
+.sent{display:none;font-family:var(--serif);font-style:italic;font-size:22px;align-self:center}
+
+.foot{grid-column:span 12;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:8px 10px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(20px);transition:opacity .8s ease,transform .8s ease}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+
+/* responsive */
+@media(max-width:1100px){
+  .layout{grid-template-columns:1fr}
+  aside{position:relative;height:auto;padding:28px;gap:28px}
+  .mono{font-size:46px;margin-top:26px}
+  .menu{display:none}
+  .side-bot{margin-top:10px}
+}
+@media(max-width:900px){
+  main{padding:14px}
+  .c-hero,.c-photo,.c-edu,.c-ex,.c-ath,.c-about,.quote{grid-column:span 12;grid-row:auto}
+  .c-photo{min-height:420px}
+  .focus-row{grid-template-columns:1fr 1fr}
+  .adv-grid{grid-template-columns:1fr}
+  .j-grid{grid-template-columns:1fr}
+  .c-contact{grid-template-columns:1fr}
+  .two{grid-template-columns:1fr}
+  .card{padding:26px}
+}
+@media(max-width:520px){.focus-row{grid-template-columns:1fr}}
+
+.c-photo img,.jp .th img,.card .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.c-photo img{filter:saturate(.85) contrast(1.03)}
+.jp .th img{transition:transform .8s}
+.jp:hover .th img{transform:scale(1.06)}
+.c-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 50%,rgba(9,29,25,.6));pointer-events:none}
+.c-photo .tag{z-index:2}
+.c-ath{background:var(--deep);color:var(--cream);display:flex;flex-direction:column;justify-content:flex-end;min-height:270px}
+.c-ath::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(9,29,25,.1),rgba(9,29,25,.85))}
+.c-ath>*:not(.bg){position:relative;z-index:2}
+.c-ath p{color:var(--sage)}
+.quote::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(9,29,25,.72),rgba(9,29,25,.9))}
+.quote>*:not(.bg){position:relative;z-index:2}
+</style>
+</head>
+<body>
+<div class="layout">
+
+<aside>
+  <div class="side-top">
+    <span class="badge"><i></i> Concept preview</span>
+    <div class="mono">Anaheez<em>Patel</em></div>
+    <p class="role">Luxury · Branding · Social Psychology · Culture</p>
+    <nav class="menu">
+      <a href="#about">About <span>01</span></a>
+      <a href="#focus">Focus <span>02</span></a>
+      <a href="#advisory">Advisory <span>03</span></a>
+      <a href="#journal">Journal <span>04</span></a>
+      <a href="#contact">Collaborate <span>05</span></a>
+    </nav>
+  </div>
+  <div class="side-bot">
+    <a class="go" href="#contact">Enquire</a>
+    <small>Unofficial design mockup</small>
+  </div>
+</aside>
+
+<main>
+<div class="bento">
+
+  <div class="card c-hero rv" id="top">
+    <div>
+      <span class="lbl">Personal website · concept</span>
+      <h1>Taste has a <em>psychology.</em><br>Culture has a <em>price.</em></h1>
+      <p>Luxury, branding and social psychology, read through culture, with intellect, athleticism and the occasional tomfoolery.</p>
+    </div>
+    <div class="pills"><span>Luxury</span><span>Branding</span><span>Social Psychology</span><span>Culture</span></div>
+  </div>
+
+  <div class="card c-photo rv">
+    <img src="https://images.unsplash.com/photo-1769117695165-6ecb44ff1150?auto=format&amp;fit=crop&amp;w=1000&amp;q=75" alt="Visitors walking through a dimly lit art gallery" loading="lazy" >
+    <div class="tag">Stock photo · swap in her portrait</div>
+  </div>
+
+  <div class="card c-edu rv">
+    <span class="lbl">Education</span>
+    <h3>NYU <em>Stern</em></h3>
+    <p>MBA</p>
+  </div>
+  <div class="card c-ex rv">
+    <span class="lbl">Formerly</span>
+    <h3>Vogue India &amp; Condé Nast India</h3>
+    <p>Editorial roots in luxury media.</p>
+  </div>
+  <div class="card c-ath rv"><img src="https://images.unsplash.com/photo-1514489024785-d5ba8dfb2198?auto=format&amp;fit=crop&amp;w=900&amp;q=75" alt="Woman running at golden hour" loading="lazy" class="bg">
+    <span class="lbl">Off the clock</span>
+    <h3>Intellect, athleticism &amp; tomfoolery</h3>
+    <p>The personality behind the point of view.</p>
+  </div>
+
+  <div class="card c-about rv" id="about">
+    <span class="lbl">01 — About</span>
+    <h2>Where luxury meets <em>behaviour.</em></h2>
+    <p>Anaheez Patel works at the intersection of luxury, branding and social psychology, with a close eye on culture and why people want what they want.</p>
+    <p>With a background in the editorial world of Vogue India and Condé Nast India and an MBA from NYU Stern, this site gives her advisory work and writing one considered home.</p>
+  </div>
+  <div class="card quote rv"><img src="https://images.unsplash.com/photo-1762968274962-20c12e6e8ecd?auto=format&amp;fit=crop&amp;w=900&amp;q=75" alt="Speaker presenting on stage to an audience" loading="lazy" class="bg">
+    <div class="q">Sample pull-quote placeholder: a line from her writing goes here.</div>
+    <small>Placeholder · to be replaced</small>
+  </div>
+
+  <div class="card c-focus rv" id="focus">
+    <span class="lbl">02 — Focus</span>
+    <h2>Four lenses, one point of view.</h2>
+    <div class="focus-row">
+      <div class="fo"><span class="n">i.</span><b>Luxury</b><p>What makes something worth more than its price.</p></div>
+      <div class="fo"><span class="n">ii.</span><b>Branding</b><p>Positioning, narrative and restraint.</p></div>
+      <div class="fo"><span class="n">iii.</span><b>Social Psychology</b><p>Status, belonging and aspiration.</p></div>
+      <div class="fo"><span class="n">iv.</span><b>Culture</b><p>Reading the signals before the market does.</p></div>
+    </div>
+  </div>
+
+  <div class="card c-adv rv" id="advisory">
+    <span class="lbl">03 — Advisory</span>
+    <h2>Ways to <em>work together.</em></h2>
+    <div class="adv-grid">
+      <div class="ad"><i>01</i><div><b>Brand Strategy</b><p>Positioning and narrative for luxury and luxury-adjacent brands.</p></div></div>
+      <div class="ad"><i>02</i><div><b>Consumer Insight</b><p>Psychology-led reading of desire, status and audience behaviour.</p></div></div>
+      <div class="ad"><i>03</i><div><b>Speaking &amp; Panels</b><p>Keynotes and conversations on luxury, culture and branding.</p></div></div>
+      <div class="ad"><i>04</i><div><b>Brand Partnerships</b><p>Selective collaborations that fit her voice and audience.</p></div></div>
+    </div>
+    <p class="note">Sample structure only. Service names and descriptions to be replaced with her own.</p>
+  </div>
+
+  <div class="card c-journal rv" id="journal">
+    <span class="lbl">04 — Journal</span>
+    <h2>A permanent archive for <em>the long thought.</em></h2>
+    <div class="j-grid">
+      <div class="jp"><div class="th"><img src="https://images.unsplash.com/photo-1749264361617-dbe17a223f54?auto=format&amp;fit=crop&amp;w=900&amp;q=75" alt="Perfume bottle on a dark textured surface" loading="lazy" ></div><div class="tx"><small>Luxury</small><b>Sample title: why scarcity still sells</b></div></div>
+      <div class="jp"><div class="th"><img src="https://images.unsplash.com/photo-1690733546457-029606fbc0e6?auto=format&amp;fit=crop&amp;w=900&amp;q=75" alt="Overhead view of a brand mood board with images and fabric samples" loading="lazy" ></div><div class="tx"><small>Branding</small><b>Sample title: the quiet logo</b></div></div>
+      <div class="jp"><div class="th"><img src="https://images.unsplash.com/photo-1758274252296-a63b1d7d4bb8?auto=format&amp;fit=crop&amp;w=900&amp;q=75" alt="Two friends talking at an open-air cafe table" loading="lazy" ></div><div class="tx"><small>Social Psychology</small><b>Sample title: status without shouting</b></div></div>
+    </div>
+    <p class="note" style="color:var(--muted)">Titles are illustrative placeholders for layout only, not her published work.</p>
+  </div>
+
+  <div class="card c-contact rv" id="contact">
+    <div>
+      <span class="lbl">05 — Collaborate</span>
+      <h2>An official front door for enquiries.</h2>
+      <p class="s">A structured intake replaces scattered DMs, so advisory, speaking and partnership requests arrive complete.</p>
+      <ul>
+        <li>Advisory <span>Enquire</span></li>
+        <li>Speaking <span>Enquire</span></li>
+        <li>Brand partnerships <span>Media kit</span></li>
+        <li>Press <span>Contact</span></li>
+      </ul>
+    </div>
+    <form id="f" onsubmit="event.preventDefault();this.style.display='none';document.getElementById('sent').style.display='block'">
+      <div class="two"><input placeholder="Name" required aria-label="Name"><input placeholder="Company" aria-label="Company"></div>
+      <input type="email" placeholder="Email" required aria-label="Email">
+      <select aria-label="Enquiry type"><option>Advisory</option><option>Speaking</option><option>Brand partnership</option><option>Press</option></select>
+      <textarea placeholder="Tell her about the project" aria-label="Brief"></textarea>
+      <button type="submit">Send enquiry</button>
+    </form>
+    <div id="sent" class="sent">Demo only: this form doesn't send anywhere in the preview.</div>
+  </div>
+
+  <div class="foot">
+    <span>Concept preview · design mockup</span><span style="letter-spacing:.08em;text-transform:none">Photos via Unsplash: Helena Lopes, Kier in Sight Archives, Fiona Murray-deGraaff, Vitaly Gariev, Carlos Gil, Javier Allegue Barros</span>
+    <a href="https://www.instagram.com/anaheezpatel/" target="_blank" rel="noopener">Instagram ↗</a>
+    <span>© Anaheez Patel</span>
+  </div>
+
+</div>
+</main>
+</div>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.1});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+<style>.gsw-rb{position:fixed;left:50%;bottom:14px;transform:translateX(-50%);z-index:2147483000;display:flex;align-items:center;gap:.4rem;padding:.4rem .45rem .4rem 1rem;background:#0b1f4d;color:#fff;border-radius:999px;font:600 13px/1.2 Inter,system-ui,sans-serif;box-shadow:0 8px 28px rgba(0,0,0,.28);white-space:nowrap;max-width:calc(100vw - 24px)}.gsw-rb a{color:#fff;text-decoration:none}.gsw-rb .b{background:#ff7a1a;color:#fff;border-radius:999px;padding:.5rem .9rem}.gsw-rb .l{opacity:.85;padding:.5rem .6rem}.gsw-rb .l:hover{opacity:1}@media(max-width:520px){.gsw-rb>span{display:none}.gsw-rb{padding-left:.45rem}}</style>
+<div class="gsw-rb" id="gswRb" role="complementary" aria-label="GSWebIT template preview"><span>Template preview by GSWebIT</span><a class="l" href="/templates.html">All templates</a><a class="b" href="/contact.html">Get this template</a></div>
+<script>if(self!==top){var r=document.getElementById("gswRb");r&&r.remove()}</script>
+</body>
+</html>

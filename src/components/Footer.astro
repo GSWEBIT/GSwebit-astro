@@ -1,0 +1,57 @@
+---
+const IG = 'https://www.instagram.com/gswebit/';
+const currentYear = new Date().getFullYear();
+
+const svc = [
+  { href: '/services#web-design', label: 'Web Design' },
+  { href: '/services#web-development', label: 'Web Development' },
+  { href: '/services#digital-marketing', label: 'Digital Marketing' },
+  { href: '/services#odoo', label: 'Odoo' },
+  { href: '/services#wordpress', label: 'WordPress Development' },
+];
+---
+
+<footer class="ftr">
+  <div class="wrap ftr-in">
+    <div>
+      <img class="ftr-logo" src="/assets/logo-full.png" alt="GSWebIT" />
+      <p>gswebit23@gmail.com<br />+91 70429 90297<br />+91 88825 11942</p>
+      <a class="ftr-ig" href={IG} target="_blank" rel="noopener noreferrer" aria-label="GSWebIT on Instagram">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="2.5" y="2.5" width="19" height="19" rx="5.5"></rect>
+          <circle cx="12" cy="12" r="4.2"></circle>
+          <path d="M17.6 6.4h.01"></path>
+        </svg>
+        <span>@gswebit</span>
+      </a>
+    </div>
+    <div>
+      <h4>Services</h4>
+      <ul>
+        {svc.map((s) => (
+          <li><a href={s.href}>{s.label}</a></li>
+        ))}
+      </ul>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <ul>
+        <li><a href="/about">About</a></li>
+        <li><a href="/templates">Templates</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Have a project in mind?</h4>
+      <p>Tell us about it and we'll take it from there.</p>
+      <a class="btn wht" href="/contact">Inquire now</a>
+    </div>
+  </div>
+  <div class="legal">
+    <div class="wrap">
+      <span>© {currentYear} GSWebIT. All rights reserved.</span>
+      <span>Privacy Policy · Terms of Service</span>
+    </div>
+  </div>
+</footer>
+

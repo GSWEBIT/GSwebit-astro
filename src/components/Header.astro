@@ -1,0 +1,80 @@
+---
+interface Props {
+  currentPath?: string;
+}
+
+const { currentPath = '/' } = Astro.props;
+
+const normalize = (p: string) => {
+  const c = p.replace(/\/index\.html$/, '/').replace(/\.html$/, '');
+  return c === '' ? '/' : c;
+};
+
+const normCurrent = normalize(currentPath);
+
+const links = [
+  { href: '/', label: 'Home' },
+  { href: '/about', label: 'About' },
+  { href: '/services', label: 'Services', isDropdown: true },
+  { href: '/templates', label: 'Templates' },
+  { href: '/contact', label: 'Contact' },
+];
+
+const svc = [
+  { href: '/services#web-design', label: 'Web Design' },
+  { href: '/services#web-development', label: 'Web Development' },
+  { href: '/services#digital-marketing', label: 'Digital Marketing' },
+  { href: '/services#odoo', label: 'Odoo' },
+  { href: '/services#wordpress', label: 'WordPress Development' },
+];
+
+const IG = 'https://www.instagram.com/gswebit/';
+const isActive = (href: string) => (normalize(href) === normCurrent ? ' on' : '');
+---
+
+<header class="hdr">
+  <div class="wrap bar">
+    <a class="logo" href="/">
+      <img src="/assets/mark.png" alt="GSWebIT" />
+      <span><span class="b">GS</span>Web<span class="o">IT</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      {links.map((link) => (
+        link.isDropdown ? (
+          <div class="dd">
+            <a class={isActive(link.href)} href={link.href}>{link.label} ▾</a>
+            <div class="dd-menu">
+              {svc.map((s) => (
+                <a href={s.href}>{s.label}</a>
+              ))}
+            </div>
+          </div>
+        ) : (
+          <a class={isActive(link.href)} href={link.href}>{link.label}</a>
+        )
+      ))}
+    </nav>
+    <a class="ig" href={IG} target="_blank" rel="noopener noreferrer" aria-label="GSWebIT on Instagram" title="Instagram">
+      <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="2.5" y="2.5" width="19" height="19" rx="5.5"></rect>
+        <circle cx="12" cy="12" r="4.2"></circle>
+        <path d="M17.6 6.4h.01"></path>
+      </svg>
+    </a>
+    <a class="btn acc" href="/contact">Inquire now</a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
+      <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path d="M4 7h16M4 12h16M4 17h16"></path>
+      </svg>
+    </button>
+  </div>
+  <nav class="mnav" id="mnav" aria-label="Mobile">
+    <div>
+      {links.map((link) => (
+        <a class={isActive(link.href).trim()} href={link.href}>{link.label}</a>
+      ))}
+      <a href={IG} target="_blank" rel="noopener noreferrer">Instagram</a>
+    </div>
+  </nav>
+</header>
+

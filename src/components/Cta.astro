@@ -1,0 +1,19 @@
+---
+interface Props {
+  bg?: 'blue' | 'orange';
+}
+
+const { bg = 'blue' } = Astro.props;
+---
+
+<div class={`cta ${bg}`}>
+  <div class="cta-box">
+    <div class="cta-in">
+      <p class="eyebrow" style="margin:0;max-width:none">Get started</p>
+      <h2>Book Your Appointment Now</h2>
+      <p>Tell us about your project and we'll get back to you within one business day with next steps.</p>
+      <a class="btn acc" href="/contact">Book now</a>
+    </div>
+  </div>
+</div>
+

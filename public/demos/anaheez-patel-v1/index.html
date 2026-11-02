@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anaheez Patel — Concept Preview</title>
+<meta name="description" content="Editorial personal website concept for Anaheez Patel: luxury, branding, social psychology and culture.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ivory:#f6f1ea;
+  --paper:#fbf8f3;
+  --ink:#141210;
+  --muted:#6f675f;
+  --line:#d9d0c4;
+  --accent:#7a1f2b;
+  --gold:#a98a4f;
+  --serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;
+  --sans:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--ivory);color:var(--ink);font-family:var(--sans);font-weight:300;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img,svg{display:block;max-width:100%}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+
+/* concept ribbon */
+.ribbon{background:var(--ink);color:#e8dfd2;font-size:11px;letter-spacing:.22em;text-transform:uppercase;text-align:center;padding:9px 16px}
+.ribbon b{color:var(--gold);font-weight:500}
+
+/* nav */
+header{position:sticky;top:0;z-index:20;background:rgba(246,241,234,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{font-family:var(--serif);font-size:24px;font-weight:500;letter-spacing:.04em}
+.logo span{color:var(--accent);font-style:italic}
+.links{display:flex;gap:34px;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase}
+.links a{position:relative;padding:4px 0}
+.links a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--accent);transition:width .35s}
+.links a:hover::after{width:100%}
+.btn{display:inline-block;font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;padding:15px 30px;border:1px solid var(--ink);transition:.3s;cursor:pointer;background:transparent;font-family:var(--sans);color:var(--ink)}
+.btn:hover{background:var(--ink);color:var(--ivory)}
+.btn.solid{background:var(--ink);color:var(--ivory)}
+.btn.solid:hover{background:var(--accent);border-color:var(--accent)}
+@media(max-width:820px){.links{display:none}}
+
+/* hero */
+.hero{padding:70px 0 90px}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:64px;align-items:center}
+.eyebrow{font-size:11.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--accent);margin-bottom:28px;display:flex;align-items:center;gap:14px}
+.eyebrow::before{content:"";width:44px;height:1px;background:var(--accent)}
+h1{font-family:var(--serif);font-weight:300;font-size:clamp(54px,8.4vw,118px);line-height:.94;letter-spacing:-.015em}
+h1 em{font-style:italic;color:var(--accent);font-weight:400}
+.lede{font-family:var(--serif);font-size:clamp(21px,2.3vw,28px);line-height:1.4;color:#3a342e;margin:34px 0 40px;max-width:30ch;font-weight:400}
+.cta-row{display:flex;gap:16px;flex-wrap:wrap}
+.tags{margin-top:52px;display:flex;flex-wrap:wrap;gap:10px 26px;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+.tags i{font-style:normal;color:var(--gold)}
+
+/* portrait slot */
+.portrait{position:relative;aspect-ratio:4/5.2;border-radius:300px 300px 4px 4px;overflow:hidden;background:linear-gradient(160deg,#e7dccb 0%,#c9b79a 45%,#8f6e5b 100%);box-shadow:0 40px 80px -30px rgba(40,20,10,.35)}
+.portrait svg{position:absolute;inset:0;width:100%;height:100%}
+.portrait .slot{position:absolute;left:0;right:0;bottom:22px;text-align:center;font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;color:rgba(255,255,255,.85)}
+.frame{position:absolute;inset:-14px;border:1px solid var(--gold);border-radius:314px 314px 8px 8px;pointer-events:none;opacity:.7}
+.portrait-wrap{position:relative;padding:14px}
+.stamp{position:absolute;right:-6px;bottom:70px;background:var(--paper);border:1px solid var(--line);padding:16px 20px;font-family:var(--serif);font-size:17px;line-height:1.25;box-shadow:0 20px 40px -20px rgba(0,0,0,.25)}
+.stamp small{display:block;font-family:var(--sans);font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr}.portrait-wrap{max-width:420px}}
+
+/* marquee */
+.marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;white-space:nowrap;padding:20px 0;background:var(--paper)}
+.marquee div{display:inline-block;animation:slide 38s linear infinite;font-family:var(--serif);font-style:italic;font-size:26px;color:#4a423a}
+.marquee span{margin:0 30px;color:var(--gold);font-style:normal}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* sections */
+section{padding:110px 0}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:60px;flex-wrap:wrap}
+.num{font-size:11.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--accent);margin-bottom:16px}
+h2{font-family:var(--serif);font-weight:300;font-size:clamp(38px,5.2vw,68px);line-height:1.04;letter-spacing:-.01em;max-width:16ch}
+h2 em{font-style:italic;color:var(--accent)}
+.sec-head p{max-width:38ch;color:var(--muted)}
+
+/* about */
+.about{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:80px;align-items:start}
+.about-art{position:relative;aspect-ratio:1/1.1;background:linear-gradient(140deg,#1d1816,#3b2a25);overflow:hidden}
+.about-art svg{position:absolute;inset:0;width:100%;height:100%}
+.about-art .slot{position:absolute;left:24px;bottom:22px;font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;color:rgba(255,255,255,.7)}
+.about-copy p{font-size:18px;color:#3a342e;margin-bottom:22px;max-width:56ch}
+.about-copy p:first-of-type::first-letter{font-family:var(--serif);font-size:78px;float:left;line-height:.8;padding:8px 14px 0 0;color:var(--accent)}
+.creds{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:44px;border-top:1px solid var(--line)}
+.creds div{padding:26px 22px 0 0}
+.creds b{display:block;font-family:var(--serif);font-weight:500;font-size:24px;line-height:1.15;margin-bottom:6px}
+.creds span{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+@media(max-width:900px){.about-grid{grid-template-columns:1fr;gap:44px}.creds{grid-template-columns:1fr}}
+
+/* pillars */
+.pillars{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--ink)}
+.pillar{padding:34px 26px 40px 0;border-right:1px solid var(--line);transition:.4s}
+.pillar:last-child{border-right:0}
+.pillar + .pillar{padding-left:26px}
+.pillar .k{font-family:var(--serif);font-size:15px;color:var(--gold);letter-spacing:.1em}
+.pillar h3{font-family:var(--serif);font-weight:400;font-size:34px;line-height:1.05;margin:56px 0 16px}
+.pillar p{color:var(--muted);font-size:15px}
+.pillar:hover h3{color:var(--accent)}
+@media(max-width:900px){.pillars{grid-template-columns:1fr 1fr}.pillar{border-bottom:1px solid var(--line);padding-left:0!important}.pillar h3{margin-top:30px}}
+@media(max-width:560px){.pillars{grid-template-columns:1fr}.pillar{border-right:0}}
+
+/* advisory */
+.advisory{background:var(--ink);color:#efe7da}
+.advisory .num{color:var(--gold)}
+.advisory h2 em{color:var(--gold)}
+.advisory .sec-head p{color:#a79d90}
+.svc{display:grid;grid-template-columns:90px 1fr 1.1fr 40px;gap:30px;align-items:center;padding:36px 0;border-top:1px solid #3a322c;transition:.35s}
+.svc:last-child{border-bottom:1px solid #3a322c}
+.svc:hover{padding-left:16px;background:linear-gradient(90deg,rgba(169,138,79,.08),transparent)}
+.svc .i{font-family:var(--serif);color:var(--gold);font-size:22px}
+.svc h3{font-family:var(--serif);font-weight:400;font-size:clamp(26px,3vw,38px);line-height:1.1}
+.svc p{color:#a79d90;font-size:15px}
+.svc .ar{font-size:22px;color:var(--gold);transition:.3s}
+.svc:hover .ar{transform:translateX(6px)}
+@media(max-width:820px){.svc{grid-template-columns:1fr;gap:10px}.svc .ar{display:none}}
+
+/* journal */
+.posts{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:34px}
+.post .thumb{aspect-ratio:4/5;position:relative;overflow:hidden;margin-bottom:22px}
+.post:first-child .thumb{aspect-ratio:auto;height:100%;min-height:380px;margin-bottom:0}
+.thumb svg{position:absolute;inset:0;width:100%;height:100%;transition:transform .8s}
+.post:hover .thumb svg{transform:scale(1.06)}
+.post .cat{font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.post h3{font-family:var(--serif);font-weight:400;font-size:28px;line-height:1.15;margin-bottom:10px}
+.post p{color:var(--muted);font-size:15px}
+.post.feature{position:relative}
+.post.feature .over{position:absolute;left:0;right:0;bottom:0;padding:34px;background:linear-gradient(transparent,rgba(10,6,4,.88));color:#fff}
+.post.feature .over .cat{color:var(--gold)}
+.post.feature .over h3{font-size:36px}
+.post.feature .over p{color:#d6cdc0}
+.note{margin-top:34px;font-size:12px;color:var(--muted);letter-spacing:.04em;font-style:italic}
+@media(max-width:900px){.posts{grid-template-columns:1fr}.post:first-child .thumb{min-height:420px}}
+
+/* collab */
+.collab{background:var(--paper);border-top:1px solid var(--line)}
+.collab-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px}
+.collab h2{max-width:12ch}
+.kit{margin-top:34px;display:grid;gap:0}
+.kit div{display:flex;justify-content:space-between;padding:17px 0;border-top:1px solid var(--line);font-size:15px}
+.kit div:last-child{border-bottom:1px solid var(--line)}
+.kit span{color:var(--muted);font-size:11.5px;letter-spacing:.2em;text-transform:uppercase}
+form{display:grid;gap:26px}
+.f{display:grid;gap:8px}
+label{font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--muted)}
+input,select,textarea{font-family:var(--sans);font-weight:300;font-size:16px;background:transparent;border:0;border-bottom:1px solid var(--ink);padding:10px 0;color:var(--ink);outline:none;border-radius:0}
+input:focus,select:focus,textarea:focus{border-color:var(--accent)}
+textarea{resize:vertical;min-height:90px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.sent{display:none;font-family:var(--serif);font-size:22px;color:var(--accent);font-style:italic}
+@media(max-width:900px){.collab-grid{grid-template-columns:1fr;gap:56px}.two{grid-template-columns:1fr}}
+
+/* footer */
+footer{padding:70px 0 40px;border-top:1px solid var(--line)}
+.foot{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap}
+.big{font-family:var(--serif);font-weight:300;font-size:clamp(44px,8vw,110px);line-height:.95}
+.big em{color:var(--accent)}
+.fine{margin-top:50px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity 1s ease,transform 1s ease}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.marquee div{animation:none}}
+
+.portrait img,.about-art img,.thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.portrait img{filter:saturate(.8) sepia(.2) contrast(1.02)}
+.about-art img{filter:saturate(.9) contrast(1.03)}
+.thumb img{transition:transform .8s}
+.post:hover .thumb img{transform:scale(1.06)}
+.portrait::after,.about-art::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 55%,rgba(20,12,8,.55));pointer-events:none}
+.portrait .slot,.about-art .slot{z-index:2}
+</style>
+</head>
+<body>
+
+<div class="ribbon"><b>Concept preview</b> &nbsp;·&nbsp; Unofficial design mockup &nbsp;·&nbsp; Not a live website</div>
+
+<header>
+  <div class="wrap">
+    <nav>
+      <a href="#top" class="logo">Anaheez <span>Patel</span></a>
+      <div class="links">
+        <a href="#about">About</a>
+        <a href="#focus">Focus</a>
+        <a href="#advisory">Advisory</a>
+        <a href="#journal">Journal</a>
+        <a href="#collab">Collaborate</a>
+      </div>
+      <a href="#collab" class="btn" style="padding:11px 20px">Enquire</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero" style="padding-bottom:90px">
+  <div class="wrap hero-grid">
+    <div class="rv">
+      <div class="eyebrow">Luxury &nbsp;·&nbsp; Branding &nbsp;·&nbsp; Culture</div>
+      <h1>Intellect,<br>taste &amp; <em>the<br>psychology</em><br>of desire.</h1>
+      <p class="lede">Luxury, branding and social psychology, seen through a culture lens, with a little tomfoolery.</p>
+      <div class="cta-row">
+        <a href="#advisory" class="btn solid">Work with me</a>
+        <a href="#journal" class="btn">Read the journal</a>
+      </div>
+      <div class="tags">
+        <span>Luxury</span><i>◆</i><span>Branding</span><i>◆</i><span>Social Psychology</span><i>◆</i><span>Culture</span><i>◆</i><span>Athleticism</span>
+      </div>
+    </div>
+
+    <div class="portrait-wrap rv">
+      <div class="frame"></div>
+      <div class="portrait">
+        <img src="https://images.unsplash.com/photo-1769117695165-6ecb44ff1150?auto=format&amp;fit=crop&amp;w=1000&amp;q=75" alt="Visitors walking through a dimly lit art gallery" loading="lazy" >
+        <div class="slot">Stock photo · swap in her portrait</div>
+      </div>
+      <div class="stamp"><small>Education</small>NYU Stern<br>MBA</div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div>
+    Luxury<span>✦</span>Branding<span>✦</span>Social Psychology<span>✦</span>Culture<span>✦</span>Intellect<span>✦</span>Athleticism<span>✦</span>Occasional Tomfoolery<span>✦</span>
+    Luxury<span>✦</span>Branding<span>✦</span>Social Psychology<span>✦</span>Culture<span>✦</span>Intellect<span>✦</span>Athleticism<span>✦</span>Occasional Tomfoolery<span>✦</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="about-art rv">
+      <img src="https://images.unsplash.com/photo-1514489024785-d5ba8dfb2198?auto=format&amp;fit=crop&amp;w=1000&amp;q=75" alt="Woman running at golden hour" loading="lazy" >
+      <div class="slot">Stock photo · athleticism</div>
+    </div>
+    <div class="about-copy rv">
+      <div class="num">01 — About</div>
+      <h2 style="margin-bottom:34px">Where luxury meets <em>behaviour.</em></h2>
+      <p>Anaheez Patel works at the intersection of luxury, branding and social psychology, with a close eye on culture and what it says about why people want what they want.</p>
+      <p>Her background spans the editorial world of Vogue India and Condé Nast India and an MBA at NYU Stern. This site brings that thinking, along with her advisory work and writing, into one considered home.</p>
+      <div class="creds">
+        <div><b>Vogue India</b><span>Formerly</span></div>
+        <div><b>Condé Nast India</b><span>Formerly</span></div>
+        <div><b>NYU Stern</b><span>MBA</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOCUS -->
+<section id="focus">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <div class="num">02 — Focus</div>
+        <h2>Four lenses, one <em>point of view.</em></h2>
+      </div>
+      <p>The ideas that run through her commentary, advisory work and writing.</p>
+    </div>
+    <div class="pillars rv">
+      <div class="pillar"><div class="k">I.</div><h3>Luxury</h3><p>What makes something worth more than its price tag, and how houses protect it.</p></div>
+      <div class="pillar"><div class="k">II.</div><h3>Branding</h3><p>Positioning, narrative and the discipline of saying less, better.</p></div>
+      <div class="pillar"><div class="k">III.</div><h3>Social Psychology</h3><p>Status, belonging and aspiration, and the behaviour behind the buy.</p></div>
+      <div class="pillar"><div class="k">IV.</div><h3>Culture</h3><p>Reading the signals early: taste, media and the moments that move markets.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ADVISORY -->
+<section class="advisory" id="advisory">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <div class="num">03 — Advisory</div>
+        <h2>Ways to <em>work together.</em></h2>
+      </div>
+      <p>Sample structure for her consulting framework. Titles and descriptions to be replaced with her own.</p>
+    </div>
+    <div class="rv">
+      <a href="#collab" class="svc"><div class="i">01</div><h3>Brand Strategy</h3><p>Positioning and narrative for luxury and luxury-adjacent brands.</p><div class="ar">→</div></a>
+      <a href="#collab" class="svc"><div class="i">02</div><h3>Consumer Insight</h3><p>Social-psychology-led reading of desire, status and audience behaviour.</p><div class="ar">→</div></a>
+      <a href="#collab" class="svc"><div class="i">03</div><h3>Speaking &amp; Panels</h3><p>Keynotes and conversations on luxury, culture and branding.</p><div class="ar">→</div></a>
+      <a href="#collab" class="svc"><div class="i">04</div><h3>Brand Partnerships</h3><p>Selective collaborations that fit her voice and audience.</p><div class="ar">→</div></a>
+    </div>
+  </div>
+</section>
+
+<!-- JOURNAL -->
+<section id="journal">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <div class="num">04 — Journal</div>
+        <h2>A permanent home for <em>the long thought.</em></h2>
+      </div>
+      <p>A searchable archive for essays that currently live and disappear in the feed.</p>
+    </div>
+    <div class="posts rv">
+      <article class="post feature">
+        <div class="thumb">
+          <img src="https://images.unsplash.com/photo-1749264361617-dbe17a223f54?auto=format&amp;fit=crop&amp;w=1000&amp;q=75" alt="Perfume bottle on a dark textured surface" loading="lazy" >
+        </div>
+        <div class="over"><div class="cat">Luxury</div><h3>Sample essay title: why scarcity still sells</h3><p>Placeholder excerpt for a featured essay.</p></div>
+      </article>
+      <article class="post">
+        <div class="thumb">
+          <img src="https://images.unsplash.com/photo-1690733546457-029606fbc0e6?auto=format&amp;fit=crop&amp;w=800&amp;q=75" alt="Overhead view of a brand mood board with images and fabric samples" loading="lazy" >
+        </div>
+        <div class="cat">Branding</div><h3>Sample title: the quiet logo</h3><p>Placeholder excerpt.</p>
+      </article>
+      <article class="post">
+        <div class="thumb">
+          <img src="https://images.unsplash.com/photo-1758274252296-a63b1d7d4bb8?auto=format&amp;fit=crop&amp;w=800&amp;q=75" alt="Two friends talking at an open-air cafe table" loading="lazy" >
+        </div>
+        <div class="cat">Social Psychology</div><h3>Sample title: status without shouting</h3><p>Placeholder excerpt.</p>
+      </article>
+    </div>
+    <p class="note">Essay titles are illustrative placeholders for layout only, not her published work.</p>
+  </div>
+</section>
+
+<!-- COLLAB -->
+<section class="collab" id="collab">
+  <div class="wrap collab-grid">
+    <div class="rv">
+      <div class="num">05 — Collaborate</div>
+      <h2>An official front door for <em>enquiries.</em></h2>
+      <p style="margin-top:26px;color:var(--muted);max-width:42ch">A structured intake replaces scattered DMs, so advisory, speaking and partnership requests arrive complete and qualified.</p>
+      <div class="kit">
+        <div>Advisory <span>Enquire</span></div>
+        <div>Speaking <span>Enquire</span></div>
+        <div>Brand partnerships <span>Media kit</span></div>
+        <div>Press <span>Contact</span></div>
+      </div>
+    </div>
+    <form class="rv" onsubmit="event.preventDefault();this.style.display='none';document.getElementById('sent').style.display='block'">
+      <div class="two">
+        <div class="f"><label for="n">Name</label><input id="n" required></div>
+        <div class="f"><label for="c">Company</label><input id="c"></div>
+      </div>
+      <div class="f"><label for="e">Email</label><input id="e" type="email" required></div>
+      <div class="f"><label for="t">Enquiry type</label>
+        <select id="t"><option>Advisory</option><option>Speaking</option><option>Brand partnership</option><option>Press</option></select>
+      </div>
+      <div class="f"><label for="m">Brief</label><textarea id="m"></textarea></div>
+      <div><button class="btn solid" type="submit">Send enquiry</button></div>
+    </form>
+    <div id="sent" class="sent">Demo only: this form doesn't send anywhere in the preview.</div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div class="big">Let's make it <em>official.</em></div>
+      <a class="btn" href="https://www.instagram.com/anaheezpatel/" target="_blank" rel="noopener">Instagram ↗</a>
+    </div>
+    <div class="fine">
+      <span>Concept preview · design mockup</span><span>Photos via Unsplash: Helena Lopes, Kier in Sight Archives, Fiona Murray-deGraaff, Vitaly Gariev, Carlos Gil, Javier Allegue Barros</span>
+      <span>© Anaheez Patel</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+<style>.gsw-rb{position:fixed;left:50%;bottom:14px;transform:translateX(-50%);z-index:2147483000;display:flex;align-items:center;gap:.4rem;padding:.4rem .45rem .4rem 1rem;background:#0b1f4d;color:#fff;border-radius:999px;font:600 13px/1.2 Inter,system-ui,sans-serif;box-shadow:0 8px 28px rgba(0,0,0,.28);white-space:nowrap;max-width:calc(100vw - 24px)}.gsw-rb a{color:#fff;text-decoration:none}.gsw-rb .b{background:#ff7a1a;color:#fff;border-radius:999px;padding:.5rem .9rem}.gsw-rb .l{opacity:.85;padding:.5rem .6rem}.gsw-rb .l:hover{opacity:1}@media(max-width:520px){.gsw-rb>span{display:none}.gsw-rb{padding-left:.45rem}}</style>
+<div class="gsw-rb" id="gswRb" role="complementary" aria-label="GSWebIT template preview"><span>Template preview by GSWebIT</span><a class="l" href="/templates.html">All templates</a><a class="b" href="/contact.html">Get this template</a></div>
+<script>if(self!==top){var r=document.getElementById("gswRb");r&&r.remove()}</script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Cta from '../components/Cta.astro';
+---
+
+<Layout title="About | GSWebIT">
+  <main>
+    <section class="blue pg-head">
+      <div class="wrap pg-in">
+        <div>
+          <p class="eyebrow rv" style="--d:.05s">Know about us</p>
+          <h1 class="rv" style="--d:.15s">About Us</h1>
+          <p class="sub rv" style="--d:.28s">
+            We are a modern development studio crafting high-performance web applications, seamless user experiences, and scalable solutions. From strategy to final deployment, we turn complex challenges into clean digital products.
+          </p>
+        </div>
+        <div class="art rv" style="--d:.3s">
+          <img
+            src="/assets/img/about.svg"
+            width="600"
+            height="500"
+            alt="Team collaborating around a table with charts and ideas"
+            fetchpriority="high"
+            decoding="async"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="sec">
+      <div class="wrap split">
+        <div>
+          <p class="eyebrow">Our philosophy</p>
+          <h2>Where code meets craft.</h2>
+          <p>
+            Great software is never just about writing clean code. It is about solving practical, real-world business problems. We bridge the gap between design and functionality by crafting intuitive interfaces that captivate users, paired with resilient full-stack architecture built to handle demanding workloads.
+          </p>
+          <p>
+            From day one, every feature we build is optimised for performance, security, and the long-term health of your operations.
+          </p>
+          <a class="btn line" href="/services">Learn more</a>
+        </div>
+        <div class="visual bleed">
+          <img
+            src="/assets/img/philosophy.svg"
+            width="2400"
+            height="2000"
+            alt="Two people unpacking code into a finished website"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="sec blue">
+      <div class="wrap">
+        <div class="head">
+          <h2>A proven pathway from concept to launch.</h2>
+        </div>
+        <div class="steps">
+          <div>
+            <small>1</small>
+            <h3>Discovery & scope</h3>
+            <p>We break down your core objectives, target audience, and architecture requirements.</p>
+          </div>
+          <div>
+            <small>2</small>
+            <h3>Wireframe & design</h3>
+            <p>We craft responsive layouts, design systems, and interactive prototypes.</p>
+          </div>
+          <div>
+            <small>3</small>
+            <h3>Development & testing</h3>
+            <p>We implement robust full-stack code, optimise performance, and run quality checks.</p>
+          </div>
+          <div>
+            <small>4</small>
+            <h3>Launch & evolution</h3>
+            <p>We deploy to production, monitor real-time performance, and provide ongoing support.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <Cta bg="orange" />
+  </main>
+</Layout>
+

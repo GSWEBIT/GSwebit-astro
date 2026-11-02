@@ -1,0 +1,211 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Cta from '../components/Cta.astro';
+---
+
+<Layout
+  title="Website templates | GSWebIT"
+  description="Ready-to-launch website templates from GSWebIT for local businesses, studios, creators, coaches and personal brands. Preview each one live."
+>
+  <main>
+    <section class="blue pg-head">
+      <div class="wrap pg-in one">
+        <div>
+          <p class="eyebrow rv" style="--d:.05s">Templates</p>
+          <h1 class="rv" style="--d:.15s">Website templates, ready to make yours</h1>
+          <p class="sub rv" style="--d:.28s">
+            Pick a design, preview it live, and we'll tailor it with your brand, copy and photos. Every template is fast, responsive and easy to customise.
+          </p>
+          <div class="btns rv" style="--d:.4s">
+            <a class="btn wht" href="/contact">Request a template</a>
+            <a class="btn out" href="/services">See our services</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec">
+      <div class="wrap">
+        <div class="head c">
+          <h2>Choose a starting point</h2>
+          <p class="sub">
+            Click any card to open the full live preview. The forms in previews are demos and don't send messages.
+          </p>
+        </div>
+
+        <div class="chips" role="group" aria-label="Filter templates">
+          <button class="chip on" data-f="all" aria-pressed="true">All templates</button>
+          <button class="chip" data-f="biz" aria-pressed="false">Business</button>
+          <button class="chip" data-f="personal" aria-pressed="false">Personal brand</button>
+          <button class="chip" data-f="fit" aria-pressed="false">Fitness & wellness</button>
+        </div>
+
+        <div class="grid g3" id="tplGrid">
+          <article class="proj tpl" data-cat="biz">
+            <div class="pic">
+              <div class="frame" data-w="1280" data-h="853">
+                <iframe src="/demos/harbor/" title="Harbor template preview" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>
+              </div>
+              <a class="pic-link" href="/demos/harbor/" aria-label="Open live preview of Harbor"></a>
+            </div>
+            <div class="txt">
+              <p class="kind">Café, salon, clinic or shop</p>
+              <h3>Harbor</h3>
+              <p>A bright, animated one-page site for neighbourhood businesses: menu or price list, photo gallery, reviews, opening hours and a booking form.</p>
+              <div class="tags">
+                <span class="tag">PHP</span>
+                <span class="tag">Booking form</span>
+                <span class="tag">Opening hours</span>
+              </div>
+              <div class="acts">
+                <a class="btn line" href="/demos/harbor/">Live preview</a>
+                <a class="btn acc" href="/contact?template=harbor">Get this template</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="proj tpl" data-cat="biz">
+            <div class="pic">
+              <div class="frame" data-w="1280" data-h="853">
+                <iframe src="/demos/nova/" title="Studio Nova template preview" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>
+              </div>
+              <a class="pic-link" href="/demos/nova/" aria-label="Open live preview of Studio Nova"></a>
+            </div>
+            <div class="txt">
+              <p class="kind">Brand & agency studio</p>
+              <h3>Studio Nova</h3>
+              <p>A clean brand template with a bold hero, services, work gallery and contact form. Light or dark theme, every section configurable.</p>
+              <div class="tags">
+                <span class="tag">PHP</span>
+                <span class="tag">Light / dark</span>
+                <span class="tag">Config-driven</span>
+              </div>
+              <div class="acts">
+                <a class="btn line" href="/demos/nova/">Live preview</a>
+                <a class="btn acc" href="/contact?template=nova">Get this template</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="proj tpl" data-cat="personal">
+            <div class="pic">
+              <div class="frame" data-w="1280" data-h="853">
+                <iframe src="/demos/pulse/" title="Pulse template preview" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>
+              </div>
+              <a class="pic-link" href="/demos/pulse/" aria-label="Open live preview of Pulse"></a>
+            </div>
+            <div class="txt">
+              <p class="kind">Creator & influencer media kit</p>
+              <h3>Pulse</h3>
+              <p>A dark, bento-style portfolio for creators: latest content, audience stats, rate card, brand logos and a collab enquiry form.</p>
+              <div class="tags">
+                <span class="tag">PHP</span>
+                <span class="tag">Media kit</span>
+                <span class="tag">Dark theme</span>
+              </div>
+              <div class="acts">
+                <a class="btn line" href="/demos/pulse/">Live preview</a>
+                <a class="btn acc" href="/contact?template=pulse">Get this template</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="proj tpl" data-cat="personal">
+            <div class="pic">
+              <div class="frame" data-w="1280" data-h="853">
+                <iframe src="/demos/anaheez-patel-v1/" title="Anaheez Patel, v1 template preview" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>
+              </div>
+              <a class="pic-link" href="/demos/anaheez-patel-v1/" aria-label="Open live preview of Anaheez Patel, v1"></a>
+            </div>
+            <div class="txt">
+              <p class="kind">Editorial personal brand</p>
+              <h3>Anaheez Patel, v1</h3>
+              <p>An editorial personal website concept built around big type and long-form thinking on luxury, branding and culture.</p>
+              <div class="tags">
+                <span class="tag">HTML/CSS/JS</span>
+                <span class="tag">Editorial</span>
+                <span class="tag">Concept</span>
+              </div>
+              <div class="acts">
+                <a class="btn line" href="/demos/anaheez-patel-v1/">Live preview</a>
+                <a class="btn acc" href="/contact?template=anaheez-patel-v1">Get this template</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="proj tpl" data-cat="personal">
+            <div class="pic">
+              <div class="frame" data-w="1280" data-h="853">
+                <iframe src="/demos/anaheez-patel-v2/" title="Anaheez Patel, v2 template preview" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>
+              </div>
+              <a class="pic-link" href="/demos/anaheez-patel-v2/" aria-label="Open live preview of Anaheez Patel, v2"></a>
+            </div>
+            <div class="txt">
+              <p class="kind">Bento personal brand</p>
+              <h3>Anaheez Patel, v2</h3>
+              <p>The same personal brand reimagined as a bento-style layout: punchy headlines, modular cards, quick to scan.</p>
+              <div class="tags">
+                <span class="tag">HTML/CSS/JS</span>
+                <span class="tag">Bento</span>
+                <span class="tag">Concept</span>
+              </div>
+              <div class="acts">
+                <a class="btn line" href="/demos/anaheez-patel-v2/">Live preview</a>
+                <a class="btn acc" href="/contact?template=anaheez-patel-v2">Get this template</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="proj tpl" data-cat="fit">
+            <div class="pic">
+              <div class="frame" data-w="1280" data-h="853">
+                <iframe src="/demos/naresh-kumar-coach/" title="Naresh Kumar template preview" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>
+              </div>
+              <a class="pic-link" href="/demos/naresh-kumar-coach/" aria-label="Open live preview of Naresh Kumar"></a>
+            </div>
+            <div class="txt">
+              <p class="kind">Online fitness coach</p>
+              <h3>Naresh Kumar</h3>
+              <p>A high-impact coaching site for a Mr. India 2019 title holder, with strong typography and a clear call to train online.</p>
+              <div class="tags">
+                <span class="tag">HTML/CSS/JS</span>
+                <span class="tag">Coaching</span>
+                <span class="tag">Bold type</span>
+              </div>
+              <div class="acts">
+                <a class="btn line" href="/demos/naresh-kumar-coach/">Live preview</a>
+                <a class="btn acc" href="/contact?template=naresh-kumar-coach">Get this template</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="proj tpl" data-cat="fit">
+            <div class="pic">
+              <div class="frame" data-w="1280" data-h="853">
+                <iframe src="/demos/richa-kumar-yoga/" title="Richa Kumar template preview" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>
+              </div>
+              <a class="pic-link" href="/demos/richa-kumar-yoga/" aria-label="Open live preview of Richa Kumar"></a>
+            </div>
+            <div class="txt">
+              <p class="kind">Yoga & wellness platform</p>
+              <h3>Richa Kumar</h3>
+              <p>A calm, full-length platform for a power yoga and pre/postnatal teacher: programmes, schedule, testimonials and enquiry.</p>
+              <div class="tags">
+                <span class="tag">HTML/CSS/JS</span>
+                <span class="tag">Programmes</span>
+                <span class="tag">Wellness</span>
+              </div>
+              <div class="acts">
+                <a class="btn line" href="/demos/richa-kumar-yoga/">Live preview</a>
+                <a class="btn acc" href="/contact?template=richa-kumar-yoga">Get this template</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <Cta bg="blue" />
+  </main>
+</Layout>
+

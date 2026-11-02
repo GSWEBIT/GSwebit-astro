@@ -1,0 +1,47 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  showHeader?: boolean;
+  showFooter?: boolean;
+}
+
+const {
+  title,
+  description = 'GSWebIT builds websites, WordPress, Odoo and digital marketing for growing businesses.',
+  showHeader = true,
+  showFooter = true,
+} = Astro.props;
+
+const currentPath = Astro.url.pathname;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" href="/assets/mark.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script is:inline>
+      document.documentElement.classList.add('js');
+    </script>
+    <link rel="stylesheet" href="/assets/style.css" />
+  </head>
+  <body>
+    {showHeader && <Header currentPath={currentPath} />}
+    <slot />
+    {showFooter && <Footer />}
+    <script is:inline src="/assets/main.js"></script>
+  </body>
+</html>
+

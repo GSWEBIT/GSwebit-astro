@@ -1,0 +1,600 @@
+---
+export const prerender = false;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>Admin | GSWebIT</title>
+    <link rel="icon" href="/assets/mark.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --brand: #1f4fd1;
+        --brand-d: #1740aa;
+        --accent: #ea580c;
+        --tint: #eef3fd;
+        --mut: #475569;
+        --line: #e2e8f0;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font: 400 0.95rem/1.5 Inter, system-ui, sans-serif;
+        background: var(--tint);
+        color: #0f172a;
+      }
+      .top {
+        background: var(--brand);
+        color: #fff;
+        padding: 0.9rem 1.25rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+      }
+      .top b {
+        font-size: 1.1rem;
+      }
+      .top img {
+        height: 28px;
+        width: 28px;
+        vertical-align: middle;
+        margin-right: 0.5rem;
+      }
+      button,
+      .btn {
+        font: 600 0.85rem Inter, sans-serif;
+        border: 0;
+        border-radius: 0.5rem;
+        padding: 0.55rem 0.9rem;
+        cursor: pointer;
+        background: var(--accent);
+        color: #fff;
+      }
+      button.ghost {
+        background: transparent;
+        border: 1px solid currentColor;
+        color: inherit;
+      }
+      button.danger {
+        background: #fff;
+        color: #b91c1c;
+        border: 1px solid #fecaca;
+        padding: 0.3rem 0.6rem;
+      }
+      button:disabled {
+        opacity: 0.6;
+        cursor: wait;
+      }
+      .wrap {
+        max-width: 72rem;
+        margin: 0 auto;
+        padding: 1.25rem;
+      }
+      .login {
+        max-width: 22rem;
+        margin: 12vh auto;
+        background: #fff;
+        border-radius: 1rem;
+        padding: 1.75rem;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+      }
+      .login h1 {
+        margin: 0 0 0.25rem;
+        font-size: 1.4rem;
+      }
+      .login p {
+        margin: 0 0 1rem;
+        color: var(--mut);
+      }
+      input[type='password'],
+      input[type='search'],
+      input[type='email'] {
+        width: 100%;
+        padding: 0.65rem 0.8rem;
+        border: 1px solid var(--line);
+        border-radius: 0.5rem;
+        font: inherit;
+        margin-bottom: 0.75rem;
+      }
+      .err {
+        color: #b91c1c;
+        font-size: 0.85rem;
+        min-height: 1.2em;
+        margin: 0.25rem 0 0.5rem;
+      }
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+        gap: 0.9rem;
+        margin-bottom: 1.25rem;
+      }
+      .card {
+        background: #fff;
+        border-radius: 0.9rem;
+        padding: 1rem 1.1rem;
+        border: 1px solid var(--line);
+      }
+      .card span {
+        display: block;
+        color: var(--mut);
+        font-size: 0.78rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+      }
+      .card b {
+        font-size: 2rem;
+        font-weight: 800;
+        color: var(--brand);
+        line-height: 1.2;
+      }
+      .panel {
+        background: #fff;
+        border-radius: 0.9rem;
+        border: 1px solid var(--line);
+        padding: 1rem 1.1rem;
+        margin-bottom: 1.25rem;
+      }
+      .panel h2 {
+        margin: 0 0 0.75rem;
+        font-size: 1rem;
+      }
+      .bar {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        margin: 0.35rem 0;
+        font-size: 0.85rem;
+      }
+      .bar i {
+        display: block;
+        height: 0.6rem;
+        background: var(--brand);
+        border-radius: 1rem;
+        min-width: 0.3rem;
+      }
+      .bar em {
+        font-style: normal;
+        color: var(--mut);
+        margin-left: auto;
+        font-weight: 600;
+      }
+      .tools {
+        display: flex;
+        gap: 0.6rem;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-bottom: 0.75rem;
+      }
+      .tools input {
+        margin: 0;
+        flex: 1;
+        min-width: 12rem;
+      }
+      .tw {
+        overflow-x: auto;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.85rem;
+      }
+      th,
+      td {
+        text-align: left;
+        padding: 0.6rem 0.5rem;
+        border-bottom: 1px solid var(--line);
+        vertical-align: top;
+      }
+      th {
+        color: var(--mut);
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+      }
+      td.m {
+        max-width: 26rem;
+        white-space: pre-wrap;
+        word-break: break-word;
+      }
+      .tag {
+        display: inline-block;
+        background: var(--tint);
+        color: var(--brand);
+        border-radius: 1rem;
+        padding: 0.1rem 0.55rem;
+        font-size: 0.75rem;
+        font-weight: 600;
+        white-space: nowrap;
+      }
+      .empty {
+        text-align: center;
+        color: var(--mut);
+        padding: 2rem;
+      }
+      [hidden] {
+        display: none !important;
+      }
+      .modal-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(15, 23, 42, 0.5);
+        backdrop-filter: blur(4px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 100;
+        padding: 1rem;
+      }
+      .modal-overlay .login {
+        animation: slideUp 0.3s ease;
+      }
+      @keyframes slideUp {
+        from {
+          opacity: 0;
+          transform: translateY(1rem);
+        }
+        to {
+          opacity: 1;
+          transform: none;
+        }
+      }
+      .success {
+        background: #f0fdf4;
+        color: #166534;
+        border: 1px solid #bbf7d0;
+        border-radius: 0.5rem;
+        padding: 0.6rem 0.8rem;
+        font-size: 0.85rem;
+        margin: 0.25rem 0 0.75rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="login" class="login">
+      <h1>Admin login</h1>
+      <p>GSWebIT inquiries dashboard</p>
+      <input
+        type="password"
+        id="pw"
+        placeholder="Password"
+        autocomplete="current-password"
+      />
+      <div class="err" id="lerr"></div>
+      <button id="lbtn" style="width:100%">Sign in</button>
+      <div style="text-align:center;margin-top:.75rem">
+        <a
+          href="#"
+          id="forgotLink"
+          style="color:var(--brand);font-size:.85rem;font-weight:500;text-decoration:none"
+          >Forgot Password?</a
+        >
+      </div>
+    </div>
+
+    <!-- Forgot Password Modal -->
+    <div id="forgotModal" class="modal-overlay" hidden>
+      <div class="login" style="margin:0;position:relative">
+        <button
+          id="closeForgot"
+          style="position:absolute;top:.75rem;right:.75rem;background:none;color:var(--mut);font-size:1.2rem;padding:.25rem .5rem;line-height:1"
+          >&times;</button
+        >
+        <h1>Forgot Password</h1>
+        <p>Enter your admin email to receive a reset link</p>
+        <input
+          type="email"
+          id="forgotEmail"
+          placeholder="Admin email address"
+          autocomplete="email"
+        />
+        <div class="err" id="ferr"></div>
+        <div class="success" id="fsuccess" hidden></div>
+        <button id="fbtn" style="width:100%">Send Reset Link</button>
+        <div style="text-align:center;margin-top:.75rem">
+          <a
+            href="#"
+            id="backToLogin"
+            style="color:var(--mut);font-size:.85rem;text-decoration:none"
+            >&larr; Back to login</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div id="app" hidden>
+      <div class="top">
+        <div>
+          <img src="/assets/mark.png" alt="" />
+          <b>GSWebIT Admin</b>
+        </div>
+        <div>
+          <button class="ghost" id="refresh">Refresh</button>
+          <button class="ghost" id="logout">Log out</button>
+        </div>
+      </div>
+      <div class="wrap">
+        <div class="cards">
+          <div class="card">
+            <span>Total contacts</span><b id="s-total">–</b>
+          </div>
+          <div class="card"><span>Today</span><b id="s-today">–</b></div>
+          <div class="card"><span>Last 7 days</span><b id="s-week">–</b></div>
+          <div class="card"><span>Last 30 days</span><b id="s-month">–</b></div>
+        </div>
+        <div class="panel">
+          <h2>By service</h2>
+          <div id="topics"></div>
+        </div>
+        <div class="panel">
+          <h2>Inquiries</h2>
+          <div class="tools">
+            <input
+              type="search"
+              id="q"
+              placeholder="Search name, email, topic or message…"
+            />
+            <button id="csv">Export CSV</button>
+          </div>
+          <div class="tw">
+            <table>
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Topic</th>
+                  <th>Message</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody id="rows"></tbody>
+            </table>
+          </div>
+          <div class="empty" id="empty" hidden>No inquiries found.</div>
+        </div>
+      </div>
+    </div>
+
+    <script is:inline>
+      const getApiBase = () => {
+        if (window.API_BASE_URL) return window.API_BASE_URL.replace(/\/+$/, '');
+        return '';
+      };
+      const API = getApiBase();
+      const $ = (s) => document.querySelector(s);
+
+      let items = [],
+        token = sessionStorage.getItem('gs_admin');
+
+      const esc = (s) =>
+        String(s ?? '').replace(
+          /[&<>"']/g,
+          (c) =>
+            ({
+              '&': '&amp;',
+              '<': '&lt;',
+              '>': '&gt;',
+              '"': '&quot;',
+              "'": '&#39;',
+            })[c]
+        );
+      const fmt = (d) =>
+        new Date(d).toLocaleString([], {
+          dateStyle: 'medium',
+          timeStyle: 'short',
+        });
+
+      async function api(path, opts = {}) {
+        const r = await fetch(API + path, {
+          ...opts,
+          headers: {
+            'Content-Type': 'application/json',
+            ...(token ? { Authorization: 'Bearer ' + token } : {}),
+          },
+        });
+        if (r.status === 401 && token) {
+          logout();
+          throw new Error('Session expired');
+        }
+        const j = await r.json().catch(() => ({}));
+        if (!r.ok) throw new Error(j.error || 'Request failed');
+        return j;
+      }
+
+      function show(on) {
+        $('#login').hidden = on;
+        $('#app').hidden = !on;
+      }
+      function logout() {
+        token = null;
+        sessionStorage.removeItem('gs_admin');
+        show(false);
+      }
+
+      async function login() {
+        const b = $('#lbtn');
+        b.disabled = true;
+        b.textContent = 'Signing in…';
+        $('#lerr').textContent = '';
+        try {
+          const j = await api('/api/admin/login', {
+            method: 'POST',
+            body: JSON.stringify({ password: $('#pw').value }),
+          });
+          token = j.token;
+          sessionStorage.setItem('gs_admin', token);
+          $('#pw').value = '';
+          show(true);
+          await load();
+        } catch (e) {
+          $('#lerr').textContent =
+            e.message === 'Failed to fetch'
+              ? 'Cannot reach server (it may be waking up — try again in a few seconds).'
+              : e.message;
+        }
+        b.disabled = false;
+        b.textContent = 'Sign in';
+      }
+
+      async function load() {
+        const b = $('#refresh');
+        b.disabled = true;
+        try {
+          const j = await api('/api/admin/inquiries');
+          items = j.items;
+          const s = j.stats;
+          ['total', 'today', 'week', 'month'].forEach(
+            (k) => ($('#s-' + k).textContent = s[k])
+          );
+          const max = Math.max(
+            1,
+            ...s.byTopic.map((t) => t.count)
+          );
+          $('#topics').innerHTML = s.byTopic.length
+            ? s.byTopic
+                .map(
+                  (t) =>
+                    `<div class="bar"><span style="min-width:11rem">${esc(t.topic)}</span><i style="width:${(t.count / max) * 50}%"></i><em>${t.count}</em></div>`
+                )
+                .join('')
+            : '<div class="empty">No data yet.</div>';
+          render();
+        } catch (e) {
+          alert(e.message);
+        }
+        b.disabled = false;
+      }
+
+      function filtered() {
+        const q = $('#q').value.toLowerCase().trim();
+        return q
+          ? items.filter((i) =>
+              [i.name, i.email, i.topic, i.msg].some((v) =>
+                (v || '').toLowerCase().includes(q)
+              )
+            )
+          : items;
+      }
+      function render() {
+        const list = filtered();
+        $('#empty').hidden = list.length > 0;
+        $('#rows').innerHTML = list
+          .map(
+            (i) =>
+              `<tr><td style="white-space:nowrap">${fmt(i.createdAt)}</td><td>${esc(i.name)}</td><td><a href="mailto:${esc(i.email)}">${esc(i.email)}</a></td><td>${i.topic ? `<span class="tag">${esc(i.topic)}</span>` : ''}</td><td class="m">${esc(i.msg)}</td><td><button class="danger" data-id="${esc(i._id)}">Delete</button></td></tr>`
+          )
+          .join('');
+      }
+
+      $('#rows').addEventListener('click', async (e) => {
+        const id = e.target.dataset?.id;
+        if (!id || !confirm('Delete this inquiry permanently?')) return;
+        try {
+          await api('/api/admin/inquiries/' + id, { method: 'DELETE' });
+          await load();
+        } catch (err) {
+          alert(err.message);
+        }
+      });
+      $('#q').addEventListener('input', render);
+      $('#refresh').onclick = load;
+      $('#logout').onclick = logout;
+      $('#lbtn').onclick = login;
+      $('#pw').addEventListener('keydown', (e) => e.key === 'Enter' && login());
+      $('#csv').onclick = () => {
+        const q = (v) => `"${String(v ?? '').replace(/"/g, '""')}"`;
+        const rows = [
+          ['Date', 'Name', 'Email', 'Topic', 'Message'],
+          ...filtered().map((i) => [
+            new Date(i.createdAt).toISOString(),
+            i.name,
+            i.email,
+            i.topic,
+            i.msg,
+          ]),
+        ];
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(
+          new Blob([rows.map((r) => r.map(q).join(',')).join('\n')], {
+            type: 'text/csv',
+          })
+        );
+        a.download = 'gswebit-inquiries.csv';
+        a.click();
+        URL.revokeObjectURL(a.href);
+      };
+
+      if (token) {
+        show(true);
+        load();
+      }
+
+      /* ---------------------- Forgot Password Logic --------------------- */
+      $('#forgotLink').onclick = (e) => {
+        e.preventDefault();
+        $('#forgotModal').hidden = false;
+        $('#forgotEmail').value = '';
+        $('#ferr').textContent = '';
+        $('#fsuccess').hidden = true;
+        $('#fbtn').disabled = false;
+        $('#fbtn').textContent = 'Send Reset Link';
+      };
+      $('#closeForgot').onclick = () => ($('#forgotModal').hidden = true);
+      $('#backToLogin').onclick = (e) => {
+        e.preventDefault();
+        $('#forgotModal').hidden = true;
+      };
+      $('#forgotModal').onclick = (e) => {
+        if (e.target === $('#forgotModal')) $('#forgotModal').hidden = true;
+      };
+
+      async function sendResetLink() {
+        const b = $('#fbtn');
+        b.disabled = true;
+        b.textContent = 'Sending…';
+        $('#ferr').textContent = '';
+        $('#fsuccess').hidden = true;
+        const email = $('#forgotEmail').value.trim();
+        if (!email) {
+          $('#ferr').textContent = 'Please enter your email address';
+          b.disabled = false;
+          b.textContent = 'Send Reset Link';
+          return;
+        }
+        try {
+          const j = await api('/api/admin/forgot-password', {
+            method: 'POST',
+            body: JSON.stringify({ email }),
+          });
+          $('#fsuccess').textContent = '✓ ' + j.message;
+          $('#fsuccess').hidden = false;
+          b.textContent = 'Link Sent';
+        } catch (e) {
+          $('#ferr').textContent =
+            e.message === 'Failed to fetch'
+              ? 'Cannot reach server — try again in a few seconds.'
+              : e.message;
+          b.disabled = false;
+          b.textContent = 'Send Reset Link';
+        }
+      }
+      $('#fbtn').onclick = sendResetLink;
+      $('#forgotEmail').addEventListener(
+        'keydown',
+        (e) => e.key === 'Enter' && sendResetLink()
+      );
+    </script>
+  </body>
+</html>
+

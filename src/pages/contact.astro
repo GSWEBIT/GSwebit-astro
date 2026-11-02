@@ -1,0 +1,63 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Contact | GSWebIT">
+  <main>
+    <section class="sec tint">
+      <div class="wrap">
+        <div class="contact">
+          <div>
+            <p class="eyebrow">Get your solution now</p>
+            <h1>Contact us</h1>
+            <p class="sub">Fill the form and get your appointment now.</p>
+            <form class="form" id="cform">
+              <label>Name *<input required name="name" placeholder="Enter your name" /></label>
+              <label>Email *<input required type="email" name="email" placeholder="you@example.com" /></label>
+              <label>What can we help with?
+                <select name="topic">
+                  <option>Full website build</option>
+                  <option>Website template</option>
+                  <option>Web design</option>
+                  <option>WordPress</option>
+                  <option>Odoo</option>
+                  <option>Digital marketing</option>
+                  <option>Support & maintenance</option>
+                </select>
+              </label>
+              <label>Message
+                <textarea name="msg" rows="4" placeholder="Tell us briefly about your project, timeline and objectives."></textarea>
+              </label>
+              <button class="btn acc">Send inquiry</button>
+              <p class="ok" id="ok" role="status" hidden>
+                Opening your email app to send this. You can also write to gswebit23@gmail.com.
+              </p>
+            </form>
+          </div>
+          <div class="info">
+            <h2 style="font-size:1.1rem">Talk to us directly</h2>
+            <p>
+              <b>Email</b><br />
+              <a href="mailto:gswebit23@gmail.com">gswebit23@gmail.com</a>
+            </p>
+            <p>
+              <b>Call us</b><br />
+              <a href="tel:+917042990297">+91 70429 90297</a><br />
+              <a href="tel:+918882511942">+91 88825 11942</a>
+            </p>
+            <p>We reply within one business day.</p>
+            <img
+              src="/assets/img/support.svg"
+              width="3710"
+              height="3710"
+              alt="Support agent ready to help at a computer"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
