@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 450" width="450" height="450">
+  <defs>
+    <linearGradient id="aiGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1f4fd1"/>
+      <stop offset="100%" stop-color="#8bdcea"/>
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ea580c"/>
+      <stop offset="100%" stop-color="#ffd70a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background decorative circular grid / radar pulses -->
+  <circle cx="225" cy="225" r="180" fill="#f0f5ff" stroke="#dbe7ff" stroke-width="2" stroke-dasharray="6 6"/>
+  <circle cx="225" cy="225" r="140" fill="#fff" stroke="#dbe7ff" stroke-width="2"/>
+  <circle cx="225" cy="225" r="100" fill="#f8faff" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <!-- Web Browser Window (The Site being crawled) -->
+  <g transform="translate(65, 80)">
+    <rect x="0" y="0" width="220" height="150" rx="12" fill="#ffffff" stroke="#070707" stroke-width="3"/>
+    <path d="M0 28 h220" stroke="#070707" stroke-width="2.5"/>
+    <circle cx="16" cy="14" r="4.5" fill="#ff5e54"/>
+    <circle cx="32" cy="14" r="4.5" fill="#ffd70a"/>
+    <circle cx="48" cy="14" r="4.5" fill="#6dce29"/>
+    <rect x="68" y="7" width="100" height="14" rx="7" fill="#f1f5f9"/>
+
+    <!-- Site content representation -->
+    <rect x="20" y="44" width="70" height="8" rx="4" fill="#1f4fd1"/>
+    <rect x="20" y="60" width="110" height="6" rx="3" fill="#94a3b8"/>
+    <rect x="20" y="72" width="95" height="6" rx="3" fill="#cbd5e1"/>
+    <rect x="20" y="84" width="105" height="6" rx="3" fill="#cbd5e1"/>
+
+    <!-- Structured Data / Code Badge on page -->
+    <rect x="145" y="44" width="55" height="50" rx="8" fill="#eef3fd" stroke="#1f4fd1" stroke-width="2"/>
+    <path d="M158 64 l-6 5 6 5 M187 64 l6 5-6 5 M175 58 l-5 18" stroke="#1f4fd1" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Verified Semantic AI Crawler Tag -->
+    <rect x="20" y="108" width="180" height="26" rx="6" fill="#6dce29" fill-opacity="0.15" stroke="#6dce29" stroke-width="1.5"/>
+    <text x="32" y="125" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#15803d">✓ AI Crawler Accessible · GEO Ready</text>
+  </g>
+
+  <!-- AI Crawler Bot / Engine -->
+  <g transform="translate(235, 160)">
+    <!-- Bot antenna -->
+    <line x1="85" y1="20" x2="85" y2="40" stroke="#070707" stroke-width="3"/>
+    <circle cx="85" cy="16" r="8" fill="#ea580c"/>
+    <circle cx="85" cy="16" r="4" fill="#ffd70a"/>
+
+    <!-- Bot head / main unit -->
+    <rect x="20" y="40" width="130" height="105" rx="24" fill="#1f4fd1" stroke="#070707" stroke-width="3"/>
+    <!-- Screen -->
+    <rect x="34" y="54" width="102" height="56" rx="14" fill="#070707"/>
+    <!-- Glowing AI Eyes -->
+    <circle cx="62" cy="82" r="12" fill="#8bdcea"/>
+    <circle cx="65" cy="80" r="4" fill="#ffffff"/>
+    <circle cx="108" cy="82" r="12" fill="#8bdcea"/>
+    <circle cx="111" cy="80" r="4" fill="#ffffff"/>
+    <!-- Smile wave / soundbar -->
+    <path d="M72 124 Q85 132 98 124" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Bot ear sensors -->
+    <rect x="8" y="70" width="12" height="26" rx="5" fill="#ea580c" stroke="#070707" stroke-width="2.5"/>
+    <rect x="150" y="70" width="12" height="26" rx="5" fill="#ea580c" stroke="#070707" stroke-width="2.5"/>
+  </g>
+
+  <!-- AI Crawl Rays / Neural Connection Lines between Site and AI Bot -->
+  <path d="M190 190 C 230 190, 230 140, 260 140" fill="none" stroke="#ea580c" stroke-width="3" stroke-dasharray="6 4"/>
+  <path d="M220 220 C 240 220, 240 200, 260 200" fill="none" stroke="#1f4fd1" stroke-width="2.5" stroke-dasharray="4 4"/>
+
+  <!-- AI Recommendation Output Card (Perplexity / ChatGPT Search result popup) -->
+  <g transform="translate(60, 270)">
+    <rect x="0" y="0" width="260" height="95" rx="14" fill="#ffffff" stroke="#070707" stroke-width="3"/>
+    <circle cx="28" cy="28" r="14" fill="#ffd70a" stroke="#070707" stroke-width="2"/>
+    <path d="M28 19 L31 25 L37 26 L32 30 L34 37 L28 33 L22 37 L24 30 L19 26 L25 25 Z" fill="#ea580c"/>
+    <text x="50" y="26" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#070707">AI Recommendation</text>
+    <text x="50" y="40" font-family="system-ui, sans-serif" font-size="9" font-weight="500" fill="#64748b">"Top Recommended Agency: GSWebIT"</text>
+    
+    <rect x="18" y="55" width="224" height="26" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+    <circle cx="32" cy="68" r="6" fill="#1f4fd1"/>
+    <path d="M30 68 l2 2 4-4" stroke="#fff" stroke-width="1.5" fill="none"/>
+    <text x="44" y="72" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#1f4fd1">100% Citation &amp; LLM Visibility</text>
+  </g>
+
+  <!-- Sparkles & Stars -->
+  <g fill="#ffd70a" stroke="#070707" stroke-width="1.5">
+    <path d="M60 60 L63 50 L66 60 L76 63 L66 66 L63 76 L60 66 L50 63 Z"/>
+    <path d="M380 110 L383 103 L386 110 L393 113 L386 116 L383 123 L380 116 L373 113 Z"/>
+    <path d="M360 330 L363 322 L366 330 L374 333 L366 336 L363 344 L360 336 L352 333 Z"/>
+  </g>
+</svg>

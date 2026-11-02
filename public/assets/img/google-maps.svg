@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 450" width="450" height="450">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Background decorative map grid -->
+  <rect x="35" y="35" width="380" height="380" rx="24" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+  
+  <!-- Map streets / routes -->
+  <path d="M35 140 H415" stroke="#ffffff" stroke-width="24"/>
+  <path d="M35 140 H415" stroke="#e2e8f0" stroke-width="2" stroke-dasharray="8 6"/>
+  
+  <path d="M140 35 V415" stroke="#ffffff" stroke-width="26"/>
+  <path d="M140 35 V415" stroke="#e2e8f0" stroke-width="2" stroke-dasharray="8 6"/>
+
+  <path d="M35 310 C180 310, 200 240, 415 240" fill="none" stroke="#ffffff" stroke-width="28"/>
+  <path d="M35 310 C180 310, 200 240, 415 240" fill="none" stroke="#dbe7ff" stroke-width="20"/>
+
+  <!-- Secondary map blocks (parks, water, buildings) -->
+  <rect x="55" y="55" width="65" height="65" rx="8" fill="#dcfce7" stroke="#bbf7d0" stroke-width="1.5"/>
+  <rect x="55" y="165" width="65" height="120" rx="8" fill="#f1f5f9"/>
+  <rect x="165" y="55" width="230" height="65" rx="8" fill="#f1f5f9"/>
+  <rect x="290" y="270" width="105" height="125" rx="8" fill="#dcfce7" stroke="#bbf7d0" stroke-width="1.5"/>
+
+  <!-- GPS route path highlighting -->
+  <path d="M80 310 L 140 310 L 225 210" fill="none" stroke="#1f4fd1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="80" cy="310" r="7" fill="#1f4fd1" stroke="#ffffff" stroke-width="2.5"/>
+
+  <!-- Google Business Profile Card -->
+  <g transform="translate(60, 185)" filter="url(#shadow)">
+    <rect x="0" y="0" width="220" height="145" rx="14" fill="#ffffff" stroke="#070707" stroke-width="3"/>
+    
+    <!-- Profile header / badge -->
+    <rect x="16" y="16" width="36" height="36" rx="8" fill="#1f4fd1"/>
+    <text x="25" y="39" font-family="system-ui, sans-serif" font-size="20" font-weight="800" fill="#ffffff">G</text>
+    
+    <text x="60" y="28" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#070707">GSWebIT Agency</text>
+    <text x="60" y="42" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#15803d">Verified Google Profile ✓</text>
+    
+    <!-- 5 Star Rating -->
+    <g transform="translate(16, 62)">
+      <text x="0" y="12" font-family="system-ui, sans-serif" font-size="13" font-weight="800" fill="#ea580c">5.0</text>
+      <!-- 5 Yellow stars -->
+      <g fill="#ffd70a" stroke="#070707" stroke-width="1" transform="translate(28, 2)">
+        <polygon points="6,0 8,4 12,4 9,7 10,12 6,9 2,12 3,7 0,4 4,4"/>
+        <polygon points="20,0 22,4 26,4 23,7 24,12 20,9 16,12 17,7 14,4 18,4"/>
+        <polygon points="34,0 36,4 40,4 37,7 38,12 34,9 30,12 31,7 28,4 32,4"/>
+        <polygon points="48,0 50,4 54,4 51,7 52,12 48,9 44,12 45,7 42,4 46,4"/>
+        <polygon points="62,0 64,4 68,4 65,7 66,12 62,9 58,12 59,7 56,4 60,4"/>
+      </g>
+      <text x="108" y="12" font-family="system-ui, sans-serif" font-size="10" font-weight="500" fill="#64748b">(150+ reviews)</text>
+    </g>
+
+    <!-- Category / Tags -->
+    <rect x="16" y="85" width="85" height="20" rx="5" fill="#f1f5f9"/>
+    <text x="22" y="99" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#334155">#1 Local Rank</text>
+    
+    <rect x="107" y="85" width="85" height="20" rx="5" fill="#dbe7ff"/>
+    <text x="114" y="99" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#1f4fd1">Maps Optimized</text>
+
+    <!-- Action buttons inside card -->
+    <rect x="16" y="112" width="88" height="22" rx="6" fill="#1f4fd1"/>
+    <text x="32" y="127" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#ffffff">Directions</text>
+
+    <rect x="112" y="112" width="88" height="22" rx="6" fill="#ea580c"/>
+    <text x="134" y="127" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#ffffff">Call Now</text>
+  </g>
+
+  <!-- Big Stylized Google Maps Pin Marker -->
+  <g transform="translate(240, 50)" filter="url(#shadow)">
+    <!-- Shadow under pin point -->
+    <ellipse cx="60" cy="180" rx="30" ry="8" fill="#070707" fill-opacity="0.2"/>
+
+    <!-- Pin body -->
+    <path d="M60 175 C30 135 10 95 10 60 A50 50 0 1 1 110 60 C110 95 90 135 60 175 Z" fill="#ea580c" stroke="#070707" stroke-width="3"/>
+    <path d="M60 175 C45 135 25 95 25 60 A35 35 0 1 1 95 60 C95 95 75 135 60 175 Z" fill="#ff5e54"/>
+    
+    <!-- Inner Pin circle -->
+    <circle cx="60" cy="60" r="22" fill="#ffffff" stroke="#070707" stroke-width="2.5"/>
+    <circle cx="60" cy="60" r="10" fill="#1f4fd1"/>
+  </g>
+
+  <!-- Decorative Sparkles / Compass -->
+  <g fill="#ffd70a" stroke="#070707" stroke-width="1.5">
+    <path d="M380 45 L383 38 L386 45 L393 48 L386 51 L383 58 L380 51 L373 48 Z"/>
+    <path d="M50 360 L52 353 L54 360 L61 362 L54 364 L52 371 L50 364 L43 362 Z"/>
+  </g>
+</svg>
